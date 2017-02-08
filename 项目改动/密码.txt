@@ -31,8 +31,11 @@ ITSM:http://10.128.86.199:7001/LoginFormITSM.jsp?flag=0
 
 mvn编译口令:
 	mvn clean install -Dmaven.test.skip
+<<<<<<< HEAD
 mvn导出依赖jar口令：
 	mvn dependency:copy-dependencies -DoutputDirectory=目录 -DincludeScope=模式
 	mvn dependency:copy-dependencies -DoutputDirectory=lib -DincludeScope=compile
+=======
+>>>>>>> refs/remotes/origin/master
 	
 	
