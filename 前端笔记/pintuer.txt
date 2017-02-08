@@ -1,0 +1,80 @@
+一.pintuer前端css框架
+	(1):常用meta
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">	<!-- 兼容模式处理 -->
+		<meta name="renderer" content="webkit">	<!-- 高速模式 -->
+		<meta content="telephone=no" name="format-detection">	<!-- 忽略识别数字为电话号码 -->
+	(2):容器
+		容器大小:在不同屏幕大小，.container，具体表现为超小屏幕：自动；小屏幕：760px；中屏幕：1000px；大屏幕：1200px；当不需要限制容器宽度时，请使用.container-layout容器。
+		container:容器左右各含10px的内填充(padding)
+		layout:宽度100%的容器
+		container-layout:不限制宽度容器
+	(3):常用标签
+		h1-h6:标题样式,内嵌small标签为副标题
+		strong:加粗文本
+		i:斜体文本
+		a:超链接文本
+		hr:水平线(可以有背景色)
+	(4):常用样式
+		text-indent:段落缩进2字符
+		text-more:当文本超出宽度后截断文本,并使用...省略号
+		文本对齐:text-
+			left:左对齐 center居中 right右对齐 justify标准对齐
+		文本大小:text-
+			large:特大 big:大 default:默认 small:小 little:特小
+		文本颜色:text-
+			main:主色 sub辅色 back背景色 mix融合色 dot点缀色
+		文本行距:height-
+			large:特大 big:大 default:默认 small:小 little:特小
+		文本换行:text-
+			break:默认自动换行 breakall:英文字母内换行 unbreak:不换行
+		颜色:
+			text-颜色:文本色 bg-颜色:背景色 border-颜色:边框色 bg-inverse:当使用深色背景时文字反色
+		边框大小:border- (border 默认1px)
+			large:特大 big:大 default:默认 small:小 little:特小 
+		边框位置:border-
+			top:上 bottom:下 left:左 right:右 top-bottom:上下 left-right:左右
+		边框样式:border-
+			dashed:虚线 dotted:点 double:双线 inset:内凹 outset:外凸
+		圆角:radius-		(在IE8及以下浏览器不支持)
+			small:小圆角 big:大圆角 rounded:绕圆角 circle:圆
+		阴影:box-shadow-	(在IE8及以下浏览器不支持)
+			small:小阴影 big:大阴影 none:无阴影
+		边界位置:margin-
+			top:上 bottom:下 left:左 right:右
+		边界大小:
+			large:特大 big:大 small:小 little:特小 
+		边界大小位置组合:margin-大小-位置
+		填充位置(内边距):padding-
+			top:上 bottom:下 left:左 right:右
+		填充大小(内边距):padding-
+			large:特大 big:大 small:小 little:特小 
+		填充大小位置组合:padding-大小-位置
+		图片外边框:img-border
+		img-responsive:响应式图片100%宽度,但不超过父元素
+		表单:input-
+			large:特大 big:大 small:小 little:特小 
+		按钮大小:button-
+			large:特大 big:大 small:小 little:特小 block:响应式大小
+		图标:icon-
+			heart:心 search:搜索 spinner:加载
+		表格:table-
+			striped:条纹表格 bordered:带边框表格 hover:带悬停效果表格 condensed:紧缩表格 responsive:响应式表格
+		浮动:float-
+			left:左 right:右
+		清除浮动:clearfix
+		透明:opacity-
+			small:20% middle:50% big:80% none:不透明
+		
+	(5):动画样式
+		淡入:fadein-
+			top:上 bottom:下 left:左 right:右
+		淡出:fadeout-
+			top:上 bottom:下 left:左 right:右
+		强调:
+			bounce:弹跳 bouncein:弹入 bounctout:弹出 rotatein:转入 rotateout:转出 flash:闪烁 shake:震颤 swing:摇摆 wobble:摇晃 ring:震铃
+		悬浮效果:强调-hover
+		旋转:rotate
+		悬浮旋转:rotate-hover
+			
+			
+		

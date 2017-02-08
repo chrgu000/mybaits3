@@ -1,0 +1,117 @@
+一.注解
+	RestController:指定一个类，作为控制器的注解 
+	RequestMapping:请求映射
+	EnableAutoConfiguration:自动配置
+	SpringBootApplication:是类级别的注解，根据maven依赖的jar来自动猜测完成正确的spring的对应配置，只要引入了spring-boot-starter-web的依赖，默认会自动配置Spring MVC和tomcat容器
+	Configuration:类级别的注解，一般这个注解，我们用来标识main方法所在的类,完成元数据bean的初始化
+	ComponentScan:类级别的注解，自动扫描加载所有的Spring组件包括Bean注入，一般用在main方法所在的类上
+	ImportResource:类级别注解，当我们必须使用一个xml的配置时，使用@ImportResource和@Configuration来标识这个文件资源的类
+	Scope:设定Bean的作用域
+	ResponseBody:使用返回值作为结果body
+	Transactional:事务管理
+	
+	组件声明注解:
+	Component:当不好归类时使用该注解
+	Controller:声明Action组件
+	Service:声明Service组件
+	Repository:声明Dao组件
+	
+	自动化注入注解:
+	Resource:J2ee提供的注解,默认按照名称装配:@Resource(name="beanName")
+	Autowired:Spring提供的注解,默认按照类型装配
+	
+二:笔记
+	mvc:annotation-driven:该标签是以一简洁的形式注册了DefaultAnnotationHandlerMapping和AnnotationMethodHandlerAdapter两个bean,是为Contrillers分发请求所必须的,并且提供了数据绑定支持以及NumberFormatannotation,DateTimeFormat,Valid等注解的支持
+	mvc:interceptors:是一种简写形式,可以配置多个HandlerMapping,该标签会为每一个HandlerMapping注入一个拦截器
+		拦截器可以实现HandlerInterceptorAdapter类:preHandle为前置拦截器,postHandle处理后执行
+	mvc:default-servlet-handler:使用默认的servlet来响应静态文件
+	mvc:resources:声明静态资源
+
+三:spring工具类
+StringUtils:字符串工具类
+ObjectUtils:对象工具类
+StreamUtils:IO工具类
+AnnotationUtils:注解工具类
+ReflectionUtils:反射工具类
+ClassUtils:class工具类
+GenericTypeResolver:泛型相关工具类
+
+四.SpringBoot的使用
+	application.properties/application.yml配置文件:
+		server.port=80 端口配置
+		server.context-path 路径前缀
+		spring.profiles.active: 指定需要使用的配置文件
+	注解:
+		@Value	配置文件的注入
+		@Component
+		@ConfigurationProperties
+		@Controller 处理Http请求
+		@RestController Spring4新增注解,等同于@Controller+@ResponseBody
+		@RequestMapping 配置url映射
+		@PathVariable 获取url中的数据
+		@RequestParam 获取请求参数的值(可以设置是否必须,默认值)
+		@GetMapping 组合注解 get方式@RequestMapping
+		@PostMapping post方式@RequestMapping
+		
+		@Entity 实体注解
+		@Id 主键
+		@GeneratedValue 自增
+		
+		@Transactional 开启事务
+		
+		@SpringBootApplication启动类=@Configuration+@EnableAutoConfiguration+@ComponentScan
+		@ImportResource当必须要使用xml文件时可以使用此注解
+		@ServletComponentScan 在SpringBootApplication上使用,开启@WebServlet,@WebFilter,@WebListener注解 
+	
+	注册接口:
+		ServletRegistrationBean:servlet注册
+		FilterRegistrationBean :
+		ServletListenerRegistrationBean :
+		ServletContextInitializer :
+		
+	拦截器： 
+		创建我们自己的拦截器类并实现 HandlerInterceptor 接口。 
+		创建一个Java类继承WebMvcConfigurerAdapter，并重写 addInterceptors 方法。 
+		实例化我们自定义的拦截器，然后将对像手动添加到拦截器链中（在addInterceptors方法中添加）
+		
+	服务启动时的操作:
+		需要实现CommandLineRunner接口,@Order指定执行顺序,@Component指定该类是一个组件
+		
+	servlet容器配置类(代替配置文件):EmbeddedServletContainerCustomizer  
+	
+	错误处理实现接口ErrorController:
+	
+	如果你想完全控制Spring MVC，你可以在@Configuration注解的配置类上增加@EnableWebMvc，增加
+	该注解以后WebMvcAutoConfiguration中配置就不会生效，你需要自己来配置需要的每一项。这种情况下
+	的配置方法建议参考WebMvcAutoConfiguration类。
+		
+五.SpringJpa
+	建立接口继承JpaRepository类<实体,主键>
+	findBy属性名(属性类型 形参)根据某个属性查询
+	jpa使用JPQL语法
+	spring-data-jpa语法:
+		findByNameLike:			where name like =?1
+		findByNameAndPass:			where name=?1 and pass=?2
+		findByStartDateBetween:		where start_date between ?1 and ?2
+		findByAgeLessThan:			where age<?1
+		findByAgeGreaterThan		where age>?1
+		findByAgeIsNumm				where age is null
+		findByAgeNotNull			where age not null
+		findByNameNotLike			where name not like ?1
+		findByAgeOrderByLastNameDesc		where age=? order by lastname desc
+		findByAgeNoy				where age <> ?1
+		findByAgeIn(参数为集合)		where age in ?1
+		findByAgeNotIn(参数为集合)	where age not in ?1
+		
+		
+	
+	@GeneratedValue自增注解
+	@MappedSuperclass  映射类实体
+	
+	
+六.Spring Security
+	1.需要配置过滤器:DelegatingFilterProxy
+	
+	
+	
+	

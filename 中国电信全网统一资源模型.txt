@@ -1,0 +1,113 @@
+一.命名规范
+	1).表名前缀含义
+		ME:大类实体表
+		E:细类实体表
+		MR:大类关系表
+		R:细类关系表
+		MET:大类实体类型
+		ET:细类实体类型
+		ETE:ET扩展表,对应A类属性及其值
+		MRT:大类关系类型
+		RT:细类关系类型
+		MA:大类实体属性描述
+		A:细类实体属性描述
+		
+		TM:系统支撑表
+		
+		CM:存量域主表
+		CR:存量域主表之间的关系
+		MM:元数据
+		MR:元数据之间的关系
+		
+		RM:关联域主表
+		RR:关联域主表之间的关系
+		
+	2).表记录
+		mm_table			表
+		mm_entity_spec		规格
+		mr_table_spec		表和规格的关系
+		mm_spec_attribute	规格属性
+
+		
+二.存量域模型
+	1).主表:用于存储大类下所有规格的通用属性,以及一些可能影响性能的关键应用字段,每个大类一张主表
+	2).集团扩展横表:用于存储大类下某类别实体规格共有的一些属性字段
+	3).省扩展横表:用于存放省内的个性化属性字段,应用字段
+	4).纵表:每个大类一张纵表,用于应急存储属性或者某个规格的特有属性要求属性不参与条件,运算
+	5).点:设施,设备,硬件,端口,辅助设备
+	6).线:线设施,缆线,链路
+	7).网:支持网,缆线网,管理网,系统
+	8).涉及到的表
+		CM_DEVICE			设备主表
+		CM_WARE				硬件主表
+		CM_PORT				端口主表
+		CR_DEVICE_DEVICE	设备与设备的关系
+		CR_DEVICE_WARE		设备与硬件的关系
+		CR_PORT_PORT		端口与端口的关系
+	
+		CM_LINK				链路主表
+		CR_LINK_LINK		链路与链路的关系
+		CR_LINK_CABLE		链路与缆线的关系
+		
+		CM_CABLE			缆线主表
+		CR_CABLE_CABLE		缆线与缆线的关系
+		CR_CABLE_NODE		缆线与点实体的关系
+		
+		CM_FACILITY			设施主表
+		CM_PIPELINE			设施段主表
+		CR_FACILITY_PIPELIN	设施与设施段的关系表
+		CR_PIPELINE_CABLE	设施段与缆线的关系表
+		
+		CM_NET				网主表
+		CR_NET_ENTITY		网与实体的关系表
+		
+		CM_ASSISTANCE		辅助设备主表
+		CR_ASSISTANCE_ENTITY辅助设备与实体之间的关系
+		CR_PROTECTION		资源实体之间的保护关系
+	
+			
+二.关联域模型
+	1).涉及到的表:
+		RM_AREA				区域主表					区域包含区域,区域位于区域
+		RM_ADDRESS			地址主表
+		RR_AREA_ENTITY		区域与实体的关系表
+		RR_AREA_ADDRESS		区域与地址的关系表
+		
+		RM_NBRSPACE			码号空间主表
+		RM_NUMBER			码号主表
+		RR_NBRSPACE_ENTITY	码号空间与实体的关联表
+		RR_NBRSPACE_NUMBER	码号空间与码号的关系表
+		RR_NUMBER_ENTITY	码号与实体的关系表
+		
+		RM_SERVICE			产品服务主表
+		RM_PRODUCT			产品主表
+		RR_SERVICE_SERVICE	产品服务之间的关系
+		RR_SERVICE_ENTITY	产品服务与实体关系
+		PR_SERVICE_PRODUCT	产品服务与产品关系
+		
+		RM_ASSET			资产主表
+		RM_PROJECT			工程主表
+		RR_ASSET_ENTITY		资产与实体的关系表
+		RR_PROJECT_ENTITY	工程与实体的关系表
+		
+三.元模型
+	1)命名规范
+		主表/扩展表命名方式
+		域_角色_大类
+		
+		域:
+		C:核心域
+		R:关联域
+		M:元模型
+		P:私域
+		
+		角色:
+		M:主表
+		E:扩展表
+		V:纵表
+		R:关系表
+		
+		
+		
+		
+		

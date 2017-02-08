@@ -1,0 +1,44 @@
+一.常用meta
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 	<!-- 使用兼容模式加载 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">   <!-- 移动设备优先 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">		<!-- 移动设备优先,禁用缩放 -->
+二.常用css
+	(1)布局容器:
+		container-fluid:100%宽度
+		container:固定宽度
+	(2)栅格系统
+		row必须包含在container或者container-fluid中
+		row的直接子元素包括:
+			col-xs-:总是水平排列 col-sm-:宽度大于750px时水平排列 col-md-:宽度大于970px时水平排列 col-lg-:宽度大于1170px时水平排列
+		偏移:
+			col-xs-offset-*  col-sm-offset-*
+	
+	(3)页面排版
+		lead:让文字更加突出,着重
+		文本对齐:text-
+			left:左 center:中 right:右 justify:标准 nowrap:不换行
+		文本大小写:text-
+			lowercase:小写 uppercase:大写 capitalize:首字母大写
+		列表:list-
+			unstyled:无样式列表(移除左边距)  inline:内联列表
+		表格:table-
+			striped:斑马线表格 bordered:带边框表格 hover:带悬停效果表格 condensed:紧凑表格 responsive:响应式表格
+		表单:form-
+			inline:内联表单 horizontal:水平排列的表单,配合栅格系统使用
+		form-control:根据表单type渲染
+
+三.常用标签:
+	small:副标题
+	mark:内联文本
+	del:带删除线的文本
+	s:无用的文本(带删除线)
+	ins:带下划线的文本
+	u:带下划线的文本
+	small:小号文本
+	strong:着重,强调
+	em:斜体
+	abbr:缩略语,当鼠标悬停时显示title属性的内容
+	blockquote:引用
+	
+	
+		

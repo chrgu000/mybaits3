@@ -1,0 +1,6 @@
+1.实体元模型抽象类关系结构
+	abstractMetaEntityAccessService(applicationContext-nip-platform-access-business-metaentity.xml)
+		抽象类:AbstractMetaEntityAccessServiceImpl	(com.pktech.nip.java.impl)
+		注入属性:
+			-applicationContext-platform-access-term.xml
+				entityTypeAccessService	EntityTypeAccessAuthorizationProxyServiceImpl abstractNamespaceAccessAuthorizationProxyService

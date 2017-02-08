@@ -1,0 +1,32 @@
+1. linuxÏÂÆô¶¯oracle 
+su - oracle 
+sqlplus /nolog 
+conn /as sysdba 
+startup 
+exit 
+lsnrctl start 
+exit 
+
+2. linuxÏÂ¹Ø±Õoracle 
+su - oracle 
+
+sqlplus /nolog 
+
+conn /as sysdba 
+
+shutdown immediate 
+
+exit 
+
+lsnrctl stop 
+
+exit 
+
+3¡¢Æô¶¯¼àÌýÆ÷ 
+oracle@suse92:~> lsnrctl start 
+4¡¢Í£Ö¹¼àÌýÆ÷ 
+oracle@suse92:~> lsnrctl stop 
+5¡¢²é¿´¼àÌýÆ÷×´Ì¬ 
+oracle@suse92:~> lsnrctl 
+LSNRCTL> status 
+LSNRCTL> exit 
