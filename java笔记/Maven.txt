@@ -1,0 +1,87 @@
+provided 如果
+build	 建立
+plugin	 插件
+deploy	 部署
+central  中央
+snapshot 快照
+1.主流项目管理和构建工具
+Maven Ant gradle
+
+2.Maven目录结构
+src							根路径
+	-main					主要代码
+		-java
+			-package
+	-test					测试代码
+		-java
+			-package
+	-resource				资源目录
+
+3.pom.xml标签
+	groupId					项目包名
+	artifactId				模块名
+	version					版本
+	dependencies			依赖
+		type		
+		scope				依赖范围test(测试) compile(默认) provided(编译,测试) runtime(运行) system(与本机关联) import(从其他地方导入)
+		optional			依赖是否可选true false(依赖是否被继承)
+		exclusions			排除传递
+			
+	modelVersion  			pom版本4.0.0
+	packaging				打包方式 war jar zip pom
+	name 					项目描述名
+	url						项目地址
+	description				项目描述
+	developers				开发人员列表
+	licenses				许可证
+	organization			组织信息
+	build					构建行为支持
+		defaultGoal 		指定动作  默认install
+		directory   		存放位置  默认${basedir}/target
+		finalName			文件名	  默认${artifactId}-${version}
+		plugins 			插件列表
+	dependencyManagement	依赖的管理
+	parent					父模块
+	modules					多模块
+	properties				定义属性 标签为key,内容为value,类似EL表达式引用
+4.命令
+	compile 编译(会自动下载插件和jar)
+	test 	运行测试用例
+	package	打包项目
+	clean	删除target
+	install 安装jar包到本地仓库中
+	
+	archetype:generate	创建项目骨架
+	archetype:generate -DgroupId=${包名} -DartifactId=${模块名} -Dversion${版本} -Dpackage=${包名} 快速创建项目骨架
+
+5.setting.xml标签
+	localRepository  本地仓库路径
+	mirror	镜像仓库
+	mirrorOf	仓库名称
+	profile 	指定jdk
+	
+6.eclipse的Maven插件m2e
+
+7.项目构建过程
+清理-编译-测试-打包-集成测试-验证-部署
+
+8.生命周期
+	clean 清理项目
+		pre-clean	清理前
+		clean 清理上一次构建产生的所有文件
+		post-clean  清理后
+	default 构建站点
+		compile	编译
+		test	测试
+		package	打包
+		install	安装到本地
+	site 生成项目站点
+		pre-site	生成站点前
+		site 生成项目的站点文档
+		post-site 生成站点后
+		site-deplo 发布生成的站点到服务器
+		
+9.依赖冲突
+	短路优先
+	先申明优先
+	

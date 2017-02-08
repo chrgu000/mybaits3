@@ -1,6 +1,6 @@
-1.ÊµÌåÔªÄ£ĞÍ³éÏóÀà¹ØÏµ½á¹¹
+ï»¿1.å®ä½“å…ƒæ¨¡å‹æŠ½è±¡ç±»å…³ç³»ç»“æ„
 	abstractMetaEntityAccessService(applicationContext-nip-platform-access-business-metaentity.xml)
-		³éÏóÀà:AbstractMetaEntityAccessServiceImpl	(com.pktech.nip.java.impl)
-		×¢ÈëÊôĞÔ:
+		æŠ½è±¡ç±»:AbstractMetaEntityAccessServiceImpl	(com.pktech.nip.java.impl)
+		æ³¨å…¥å±æ€§:
 			-applicationContext-platform-access-term.xml
 				entityTypeAccessService	EntityTypeAccessAuthorizationProxyServiceImpl abstractNamespaceAccessAuthorizationProxyService

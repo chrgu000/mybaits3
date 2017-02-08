@@ -1,95 +1,95 @@
-Ò».×¢½â
-	RestController:Ö¸¶¨Ò»¸öÀà£¬×÷Îª¿ØÖÆÆ÷µÄ×¢½â 
-	RequestMapping:ÇëÇóÓ³Éä
-	EnableAutoConfiguration:×Ô¶¯ÅäÖÃ
-	SpringBootApplication:ÊÇÀà¼¶±ğµÄ×¢½â£¬¸ù¾İmavenÒÀÀµµÄjarÀ´×Ô¶¯²Â²âÍê³ÉÕıÈ·µÄspringµÄ¶ÔÓ¦ÅäÖÃ£¬Ö»ÒªÒıÈëÁËspring-boot-starter-webµÄÒÀÀµ£¬Ä¬ÈÏ»á×Ô¶¯ÅäÖÃSpring MVCºÍtomcatÈİÆ÷
-	Configuration:Àà¼¶±ğµÄ×¢½â£¬Ò»°ãÕâ¸ö×¢½â£¬ÎÒÃÇÓÃÀ´±êÊ¶main·½·¨ËùÔÚµÄÀà,Íê³ÉÔªÊı¾İbeanµÄ³õÊ¼»¯
-	ComponentScan:Àà¼¶±ğµÄ×¢½â£¬×Ô¶¯É¨Ãè¼ÓÔØËùÓĞµÄSpring×é¼ş°üÀ¨Bean×¢Èë£¬Ò»°ãÓÃÔÚmain·½·¨ËùÔÚµÄÀàÉÏ
-	ImportResource:Àà¼¶±ğ×¢½â£¬µ±ÎÒÃÇ±ØĞëÊ¹ÓÃÒ»¸öxmlµÄÅäÖÃÊ±£¬Ê¹ÓÃ@ImportResourceºÍ@ConfigurationÀ´±êÊ¶Õâ¸öÎÄ¼ş×ÊÔ´µÄÀà
-	Scope:Éè¶¨BeanµÄ×÷ÓÃÓò
-	ResponseBody:Ê¹ÓÃ·µ»ØÖµ×÷Îª½á¹ûbody
-	Transactional:ÊÂÎñ¹ÜÀí
+ï»¿ä¸€.æ³¨è§£
+	RestController:æŒ‡å®šä¸€ä¸ªç±»ï¼Œä½œä¸ºæ§åˆ¶å™¨çš„æ³¨è§£ 
+	RequestMapping:è¯·æ±‚æ˜ å°„
+	EnableAutoConfiguration:è‡ªåŠ¨é…ç½®
+	SpringBootApplication:æ˜¯ç±»çº§åˆ«çš„æ³¨è§£ï¼Œæ ¹æ®mavenä¾èµ–çš„jaræ¥è‡ªåŠ¨çŒœæµ‹å®Œæˆæ­£ç¡®çš„springçš„å¯¹åº”é…ç½®ï¼Œåªè¦å¼•å…¥äº†spring-boot-starter-webçš„ä¾èµ–ï¼Œé»˜è®¤ä¼šè‡ªåŠ¨é…ç½®Spring MVCå’Œtomcatå®¹å™¨
+	Configuration:ç±»çº§åˆ«çš„æ³¨è§£ï¼Œä¸€èˆ¬è¿™ä¸ªæ³¨è§£ï¼Œæˆ‘ä»¬ç”¨æ¥æ ‡è¯†mainæ–¹æ³•æ‰€åœ¨çš„ç±»,å®Œæˆå…ƒæ•°æ®beançš„åˆå§‹åŒ–
+	ComponentScan:ç±»çº§åˆ«çš„æ³¨è§£ï¼Œè‡ªåŠ¨æ‰«æåŠ è½½æ‰€æœ‰çš„Springç»„ä»¶åŒ…æ‹¬Beanæ³¨å…¥ï¼Œä¸€èˆ¬ç”¨åœ¨mainæ–¹æ³•æ‰€åœ¨çš„ç±»ä¸Š
+	ImportResource:ç±»çº§åˆ«æ³¨è§£ï¼Œå½“æˆ‘ä»¬å¿…é¡»ä½¿ç”¨ä¸€ä¸ªxmlçš„é…ç½®æ—¶ï¼Œä½¿ç”¨@ImportResourceå’Œ@Configurationæ¥æ ‡è¯†è¿™ä¸ªæ–‡ä»¶èµ„æºçš„ç±»
+	Scope:è®¾å®šBeançš„ä½œç”¨åŸŸ
+	ResponseBody:ä½¿ç”¨è¿”å›å€¼ä½œä¸ºç»“æœbody
+	Transactional:äº‹åŠ¡ç®¡ç†
 	
-	×é¼şÉùÃ÷×¢½â:
-	Component:µ±²»ºÃ¹éÀàÊ±Ê¹ÓÃ¸Ã×¢½â
-	Controller:ÉùÃ÷Action×é¼ş
-	Service:ÉùÃ÷Service×é¼ş
-	Repository:ÉùÃ÷Dao×é¼ş
+	ç»„ä»¶å£°æ˜æ³¨è§£:
+	Component:å½“ä¸å¥½å½’ç±»æ—¶ä½¿ç”¨è¯¥æ³¨è§£
+	Controller:å£°æ˜Actionç»„ä»¶
+	Service:å£°æ˜Serviceç»„ä»¶
+	Repository:å£°æ˜Daoç»„ä»¶
 	
-	×Ô¶¯»¯×¢Èë×¢½â:
-	Resource:J2eeÌá¹©µÄ×¢½â,Ä¬ÈÏ°´ÕÕÃû³Æ×°Åä:@Resource(name="beanName")
-	Autowired:SpringÌá¹©µÄ×¢½â,Ä¬ÈÏ°´ÕÕÀàĞÍ×°Åä
+	è‡ªåŠ¨åŒ–æ³¨å…¥æ³¨è§£:
+	Resource:J2eeæä¾›çš„æ³¨è§£,é»˜è®¤æŒ‰ç…§åç§°è£…é…:@Resource(name="beanName")
+	Autowired:Springæä¾›çš„æ³¨è§£,é»˜è®¤æŒ‰ç…§ç±»å‹è£…é…
 	
-¶ş:±Ê¼Ç
-	mvc:annotation-driven:¸Ã±êÇ©ÊÇÒÔÒ»¼ò½àµÄĞÎÊ½×¢²áÁËDefaultAnnotationHandlerMappingºÍAnnotationMethodHandlerAdapterÁ½¸öbean,ÊÇÎªContrillers·Ö·¢ÇëÇóËù±ØĞëµÄ,²¢ÇÒÌá¹©ÁËÊı¾İ°ó¶¨Ö§³ÖÒÔ¼°NumberFormatannotation,DateTimeFormat,ValidµÈ×¢½âµÄÖ§³Ö
-	mvc:interceptors:ÊÇÒ»ÖÖ¼òĞ´ĞÎÊ½,¿ÉÒÔÅäÖÃ¶à¸öHandlerMapping,¸Ã±êÇ©»áÎªÃ¿Ò»¸öHandlerMapping×¢ÈëÒ»¸öÀ¹½ØÆ÷
-		À¹½ØÆ÷¿ÉÒÔÊµÏÖHandlerInterceptorAdapterÀà:preHandleÎªÇ°ÖÃÀ¹½ØÆ÷,postHandle´¦ÀíºóÖ´ĞĞ
-	mvc:default-servlet-handler:Ê¹ÓÃÄ¬ÈÏµÄservletÀ´ÏìÓ¦¾²Ì¬ÎÄ¼ş
-	mvc:resources:ÉùÃ÷¾²Ì¬×ÊÔ´
+äºŒ:ç¬”è®°
+	mvc:annotation-driven:è¯¥æ ‡ç­¾æ˜¯ä»¥ä¸€ç®€æ´çš„å½¢å¼æ³¨å†Œäº†DefaultAnnotationHandlerMappingå’ŒAnnotationMethodHandlerAdapterä¸¤ä¸ªbean,æ˜¯ä¸ºContrillersåˆ†å‘è¯·æ±‚æ‰€å¿…é¡»çš„,å¹¶ä¸”æä¾›äº†æ•°æ®ç»‘å®šæ”¯æŒä»¥åŠNumberFormatannotation,DateTimeFormat,Validç­‰æ³¨è§£çš„æ”¯æŒ
+	mvc:interceptors:æ˜¯ä¸€ç§ç®€å†™å½¢å¼,å¯ä»¥é…ç½®å¤šä¸ªHandlerMapping,è¯¥æ ‡ç­¾ä¼šä¸ºæ¯ä¸€ä¸ªHandlerMappingæ³¨å…¥ä¸€ä¸ªæ‹¦æˆªå™¨
+		æ‹¦æˆªå™¨å¯ä»¥å®ç°HandlerInterceptorAdapterç±»:preHandleä¸ºå‰ç½®æ‹¦æˆªå™¨,postHandleå¤„ç†åæ‰§è¡Œ
+	mvc:default-servlet-handler:ä½¿ç”¨é»˜è®¤çš„servletæ¥å“åº”é™æ€æ–‡ä»¶
+	mvc:resources:å£°æ˜é™æ€èµ„æº
 
-Èı:spring¹¤¾ßÀà
-StringUtils:×Ö·û´®¹¤¾ßÀà
-ObjectUtils:¶ÔÏó¹¤¾ßÀà
-StreamUtils:IO¹¤¾ßÀà
-AnnotationUtils:×¢½â¹¤¾ßÀà
-ReflectionUtils:·´Éä¹¤¾ßÀà
-ClassUtils:class¹¤¾ßÀà
-GenericTypeResolver:·ºĞÍÏà¹Ø¹¤¾ßÀà
+ä¸‰:springå·¥å…·ç±»
+StringUtils:å­—ç¬¦ä¸²å·¥å…·ç±»
+ObjectUtils:å¯¹è±¡å·¥å…·ç±»
+StreamUtils:IOå·¥å…·ç±»
+AnnotationUtils:æ³¨è§£å·¥å…·ç±»
+ReflectionUtils:åå°„å·¥å…·ç±»
+ClassUtils:classå·¥å…·ç±»
+GenericTypeResolver:æ³›å‹ç›¸å…³å·¥å…·ç±»
 
-ËÄ.SpringBootµÄÊ¹ÓÃ
-	application.properties/application.ymlÅäÖÃÎÄ¼ş:
-		server.port=80 ¶Ë¿ÚÅäÖÃ
-		server.context-path Â·¾¶Ç°×º
-		spring.profiles.active: Ö¸¶¨ĞèÒªÊ¹ÓÃµÄÅäÖÃÎÄ¼ş
-	×¢½â:
-		@Value	ÅäÖÃÎÄ¼şµÄ×¢Èë
+å››.SpringBootçš„ä½¿ç”¨
+	application.properties/application.ymlé…ç½®æ–‡ä»¶:
+		server.port=80 ç«¯å£é…ç½®
+		server.context-path è·¯å¾„å‰ç¼€
+		spring.profiles.active: æŒ‡å®šéœ€è¦ä½¿ç”¨çš„é…ç½®æ–‡ä»¶
+	æ³¨è§£:
+		@Value	é…ç½®æ–‡ä»¶çš„æ³¨å…¥
 		@Component
 		@ConfigurationProperties
-		@Controller ´¦ÀíHttpÇëÇó
-		@RestController Spring4ĞÂÔö×¢½â,µÈÍ¬ÓÚ@Controller+@ResponseBody
-		@RequestMapping ÅäÖÃurlÓ³Éä
-		@PathVariable »ñÈ¡urlÖĞµÄÊı¾İ
-		@RequestParam »ñÈ¡ÇëÇó²ÎÊıµÄÖµ(¿ÉÒÔÉèÖÃÊÇ·ñ±ØĞë,Ä¬ÈÏÖµ)
-		@GetMapping ×éºÏ×¢½â get·½Ê½@RequestMapping
-		@PostMapping post·½Ê½@RequestMapping
+		@Controller å¤„ç†Httpè¯·æ±‚
+		@RestController Spring4æ–°å¢æ³¨è§£,ç­‰åŒäº@Controller+@ResponseBody
+		@RequestMapping é…ç½®urlæ˜ å°„
+		@PathVariable è·å–urlä¸­çš„æ•°æ®
+		@RequestParam è·å–è¯·æ±‚å‚æ•°çš„å€¼(å¯ä»¥è®¾ç½®æ˜¯å¦å¿…é¡»,é»˜è®¤å€¼)
+		@GetMapping ç»„åˆæ³¨è§£ getæ–¹å¼@RequestMapping
+		@PostMapping postæ–¹å¼@RequestMapping
 		
-		@Entity ÊµÌå×¢½â
-		@Id Ö÷¼ü
-		@GeneratedValue ×ÔÔö
+		@Entity å®ä½“æ³¨è§£
+		@Id ä¸»é”®
+		@GeneratedValue è‡ªå¢
 		
-		@Transactional ¿ªÆôÊÂÎñ
+		@Transactional å¼€å¯äº‹åŠ¡
 		
-		@SpringBootApplicationÆô¶¯Àà=@Configuration+@EnableAutoConfiguration+@ComponentScan
-		@ImportResourceµ±±ØĞëÒªÊ¹ÓÃxmlÎÄ¼şÊ±¿ÉÒÔÊ¹ÓÃ´Ë×¢½â
-		@ServletComponentScan ÔÚSpringBootApplicationÉÏÊ¹ÓÃ,¿ªÆô@WebServlet,@WebFilter,@WebListener×¢½â 
+		@SpringBootApplicationå¯åŠ¨ç±»=@Configuration+@EnableAutoConfiguration+@ComponentScan
+		@ImportResourceå½“å¿…é¡»è¦ä½¿ç”¨xmlæ–‡ä»¶æ—¶å¯ä»¥ä½¿ç”¨æ­¤æ³¨è§£
+		@ServletComponentScan åœ¨SpringBootApplicationä¸Šä½¿ç”¨,å¼€å¯@WebServlet,@WebFilter,@WebListeneræ³¨è§£ 
 	
-	×¢²á½Ó¿Ú:
-		ServletRegistrationBean:servlet×¢²á
+	æ³¨å†Œæ¥å£:
+		ServletRegistrationBean:servletæ³¨å†Œ
 		FilterRegistrationBean :
 		ServletListenerRegistrationBean :
 		ServletContextInitializer :
 		
-	À¹½ØÆ÷£º 
-		´´½¨ÎÒÃÇ×Ô¼ºµÄÀ¹½ØÆ÷Àà²¢ÊµÏÖ HandlerInterceptor ½Ó¿Ú¡£ 
-		´´½¨Ò»¸öJavaÀà¼Ì³ĞWebMvcConfigurerAdapter£¬²¢ÖØĞ´ addInterceptors ·½·¨¡£ 
-		ÊµÀı»¯ÎÒÃÇ×Ô¶¨ÒåµÄÀ¹½ØÆ÷£¬È»ºó½«¶ÔÏñÊÖ¶¯Ìí¼Óµ½À¹½ØÆ÷Á´ÖĞ£¨ÔÚaddInterceptors·½·¨ÖĞÌí¼Ó£©
+	æ‹¦æˆªå™¨ï¼š 
+		åˆ›å»ºæˆ‘ä»¬è‡ªå·±çš„æ‹¦æˆªå™¨ç±»å¹¶å®ç° HandlerInterceptor æ¥å£ã€‚ 
+		åˆ›å»ºä¸€ä¸ªJavaç±»ç»§æ‰¿WebMvcConfigurerAdapterï¼Œå¹¶é‡å†™ addInterceptors æ–¹æ³•ã€‚ 
+		å®ä¾‹åŒ–æˆ‘ä»¬è‡ªå®šä¹‰çš„æ‹¦æˆªå™¨ï¼Œç„¶åå°†å¯¹åƒæ‰‹åŠ¨æ·»åŠ åˆ°æ‹¦æˆªå™¨é“¾ä¸­ï¼ˆåœ¨addInterceptorsæ–¹æ³•ä¸­æ·»åŠ ï¼‰
 		
-	·şÎñÆô¶¯Ê±µÄ²Ù×÷:
-		ĞèÒªÊµÏÖCommandLineRunner½Ó¿Ú,@OrderÖ¸¶¨Ö´ĞĞË³Ğò,@ComponentÖ¸¶¨¸ÃÀàÊÇÒ»¸ö×é¼ş
+	æœåŠ¡å¯åŠ¨æ—¶çš„æ“ä½œ:
+		éœ€è¦å®ç°CommandLineRunneræ¥å£,@OrderæŒ‡å®šæ‰§è¡Œé¡ºåº,@ComponentæŒ‡å®šè¯¥ç±»æ˜¯ä¸€ä¸ªç»„ä»¶
 		
-	servletÈİÆ÷ÅäÖÃÀà(´úÌæÅäÖÃÎÄ¼ş):EmbeddedServletContainerCustomizer  
+	servletå®¹å™¨é…ç½®ç±»(ä»£æ›¿é…ç½®æ–‡ä»¶):EmbeddedServletContainerCustomizer  
 	
-	´íÎó´¦ÀíÊµÏÖ½Ó¿ÚErrorController:
+	é”™è¯¯å¤„ç†å®ç°æ¥å£ErrorController:
 	
-	Èç¹ûÄãÏëÍêÈ«¿ØÖÆSpring MVC£¬Äã¿ÉÒÔÔÚ@Configuration×¢½âµÄÅäÖÃÀàÉÏÔö¼Ó@EnableWebMvc£¬Ôö¼Ó
-	¸Ã×¢½âÒÔºóWebMvcAutoConfigurationÖĞÅäÖÃ¾Í²»»áÉúĞ§£¬ÄãĞèÒª×Ô¼ºÀ´ÅäÖÃĞèÒªµÄÃ¿Ò»Ïî¡£ÕâÖÖÇé¿öÏÂ
-	µÄÅäÖÃ·½·¨½¨Òé²Î¿¼WebMvcAutoConfigurationÀà¡£
+	å¦‚æœä½ æƒ³å®Œå…¨æ§åˆ¶Spring MVCï¼Œä½ å¯ä»¥åœ¨@Configurationæ³¨è§£çš„é…ç½®ç±»ä¸Šå¢åŠ @EnableWebMvcï¼Œå¢åŠ 
+	è¯¥æ³¨è§£ä»¥åWebMvcAutoConfigurationä¸­é…ç½®å°±ä¸ä¼šç”Ÿæ•ˆï¼Œä½ éœ€è¦è‡ªå·±æ¥é…ç½®éœ€è¦çš„æ¯ä¸€é¡¹ã€‚è¿™ç§æƒ…å†µä¸‹
+	çš„é…ç½®æ–¹æ³•å»ºè®®å‚è€ƒWebMvcAutoConfigurationç±»ã€‚
 		
-Îå.SpringJpa
-	½¨Á¢½Ó¿Ú¼Ì³ĞJpaRepositoryÀà<ÊµÌå,Ö÷¼ü>
-	findByÊôĞÔÃû(ÊôĞÔÀàĞÍ ĞÎ²Î)¸ù¾İÄ³¸öÊôĞÔ²éÑ¯
-	jpaÊ¹ÓÃJPQLÓï·¨
-	spring-data-jpaÓï·¨:
+äº”.SpringJpa
+	å»ºç«‹æ¥å£ç»§æ‰¿JpaRepositoryç±»<å®ä½“,ä¸»é”®>
+	findByå±æ€§å(å±æ€§ç±»å‹ å½¢å‚)æ ¹æ®æŸä¸ªå±æ€§æŸ¥è¯¢
+	jpaä½¿ç”¨JPQLè¯­æ³•
+	spring-data-jpaè¯­æ³•:
 		findByNameLike:			where name like =?1
 		findByNameAndPass:			where name=?1 and pass=?2
 		findByStartDateBetween:		where start_date between ?1 and ?2
@@ -100,17 +100,17 @@ GenericTypeResolver:·ºĞÍÏà¹Ø¹¤¾ßÀà
 		findByNameNotLike			where name not like ?1
 		findByAgeOrderByLastNameDesc		where age=? order by lastname desc
 		findByAgeNoy				where age <> ?1
-		findByAgeIn(²ÎÊıÎª¼¯ºÏ)		where age in ?1
-		findByAgeNotIn(²ÎÊıÎª¼¯ºÏ)	where age not in ?1
+		findByAgeIn(å‚æ•°ä¸ºé›†åˆ)		where age in ?1
+		findByAgeNotIn(å‚æ•°ä¸ºé›†åˆ)	where age not in ?1
 		
 		
 	
-	@GeneratedValue×ÔÔö×¢½â
-	@MappedSuperclass  Ó³ÉäÀàÊµÌå
+	@GeneratedValueè‡ªå¢æ³¨è§£
+	@MappedSuperclass  æ˜ å°„ç±»å®ä½“
 	
 	
-Áù.Spring Security
-	1.ĞèÒªÅäÖÃ¹ıÂËÆ÷:DelegatingFilterProxy
+å…­.Spring Security
+	1.éœ€è¦é…ç½®è¿‡æ»¤å™¨:DelegatingFilterProxy
 	
 	
 	

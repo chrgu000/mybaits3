@@ -1,44 +1,44 @@
-Ò».³£ÓÃmeta
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 	<!-- Ê¹ÓÃ¼æÈİÄ£Ê½¼ÓÔØ -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">   <!-- ÒÆ¶¯Éè±¸ÓÅÏÈ -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">		<!-- ÒÆ¶¯Éè±¸ÓÅÏÈ,½ûÓÃËõ·Å -->
-¶ş.³£ÓÃcss
-	(1)²¼¾ÖÈİÆ÷:
-		container-fluid:100%¿í¶È
-		container:¹Ì¶¨¿í¶È
-	(2)Õ¤¸ñÏµÍ³
-		row±ØĞë°üº¬ÔÚcontainer»òÕßcontainer-fluidÖĞ
-		rowµÄÖ±½Ó×ÓÔªËØ°üÀ¨:
-			col-xs-:×ÜÊÇË®Æ½ÅÅÁĞ col-sm-:¿í¶È´óÓÚ750pxÊ±Ë®Æ½ÅÅÁĞ col-md-:¿í¶È´óÓÚ970pxÊ±Ë®Æ½ÅÅÁĞ col-lg-:¿í¶È´óÓÚ1170pxÊ±Ë®Æ½ÅÅÁĞ
-		Æ«ÒÆ:
+ï»¿ä¸€.å¸¸ç”¨meta
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 	<!-- ä½¿ç”¨å…¼å®¹æ¨¡å¼åŠ è½½ -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">   <!-- ç§»åŠ¨è®¾å¤‡ä¼˜å…ˆ -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">		<!-- ç§»åŠ¨è®¾å¤‡ä¼˜å…ˆ,ç¦ç”¨ç¼©æ”¾ -->
+äºŒ.å¸¸ç”¨css
+	(1)å¸ƒå±€å®¹å™¨:
+		container-fluid:100%å®½åº¦
+		container:å›ºå®šå®½åº¦
+	(2)æ …æ ¼ç³»ç»Ÿ
+		rowå¿…é¡»åŒ…å«åœ¨containeræˆ–è€…container-fluidä¸­
+		rowçš„ç›´æ¥å­å…ƒç´ åŒ…æ‹¬:
+			col-xs-:æ€»æ˜¯æ°´å¹³æ’åˆ— col-sm-:å®½åº¦å¤§äº750pxæ—¶æ°´å¹³æ’åˆ— col-md-:å®½åº¦å¤§äº970pxæ—¶æ°´å¹³æ’åˆ— col-lg-:å®½åº¦å¤§äº1170pxæ—¶æ°´å¹³æ’åˆ—
+		åç§»:
 			col-xs-offset-*  col-sm-offset-*
 	
-	(3)Ò³ÃæÅÅ°æ
-		lead:ÈÃÎÄ×Ö¸ü¼ÓÍ»³ö,×ÅÖØ
-		ÎÄ±¾¶ÔÆë:text-
-			left:×ó center:ÖĞ right:ÓÒ justify:±ê×¼ nowrap:²»»»ĞĞ
-		ÎÄ±¾´óĞ¡Ğ´:text-
-			lowercase:Ğ¡Ğ´ uppercase:´óĞ´ capitalize:Ê××ÖÄ¸´óĞ´
-		ÁĞ±í:list-
-			unstyled:ÎŞÑùÊ½ÁĞ±í(ÒÆ³ı×ó±ß¾à)  inline:ÄÚÁªÁĞ±í
-		±í¸ñ:table-
-			striped:°ßÂíÏß±í¸ñ bordered:´ø±ß¿ò±í¸ñ hover:´øĞüÍ£Ğ§¹û±í¸ñ condensed:½ô´Õ±í¸ñ responsive:ÏìÓ¦Ê½±í¸ñ
-		±íµ¥:form-
-			inline:ÄÚÁª±íµ¥ horizontal:Ë®Æ½ÅÅÁĞµÄ±íµ¥,ÅäºÏÕ¤¸ñÏµÍ³Ê¹ÓÃ
-		form-control:¸ù¾İ±íµ¥typeäÖÈ¾
+	(3)é¡µé¢æ’ç‰ˆ
+		lead:è®©æ–‡å­—æ›´åŠ çªå‡º,ç€é‡
+		æ–‡æœ¬å¯¹é½:text-
+			left:å·¦ center:ä¸­ right:å³ justify:æ ‡å‡† nowrap:ä¸æ¢è¡Œ
+		æ–‡æœ¬å¤§å°å†™:text-
+			lowercase:å°å†™ uppercase:å¤§å†™ capitalize:é¦–å­—æ¯å¤§å†™
+		åˆ—è¡¨:list-
+			unstyled:æ— æ ·å¼åˆ—è¡¨(ç§»é™¤å·¦è¾¹è·)  inline:å†…è”åˆ—è¡¨
+		è¡¨æ ¼:table-
+			striped:æ–‘é©¬çº¿è¡¨æ ¼ bordered:å¸¦è¾¹æ¡†è¡¨æ ¼ hover:å¸¦æ‚¬åœæ•ˆæœè¡¨æ ¼ condensed:ç´§å‡‘è¡¨æ ¼ responsive:å“åº”å¼è¡¨æ ¼
+		è¡¨å•:form-
+			inline:å†…è”è¡¨å• horizontal:æ°´å¹³æ’åˆ—çš„è¡¨å•,é…åˆæ …æ ¼ç³»ç»Ÿä½¿ç”¨
+		form-control:æ ¹æ®è¡¨å•typeæ¸²æŸ“
 
-Èı.³£ÓÃ±êÇ©:
-	small:¸±±êÌâ
-	mark:ÄÚÁªÎÄ±¾
-	del:´øÉ¾³ıÏßµÄÎÄ±¾
-	s:ÎŞÓÃµÄÎÄ±¾(´øÉ¾³ıÏß)
-	ins:´øÏÂ»®ÏßµÄÎÄ±¾
-	u:´øÏÂ»®ÏßµÄÎÄ±¾
-	small:Ğ¡ºÅÎÄ±¾
-	strong:×ÅÖØ,Ç¿µ÷
-	em:Ğ±Ìå
-	abbr:ËõÂÔÓï,µ±Êó±êĞüÍ£Ê±ÏÔÊ¾titleÊôĞÔµÄÄÚÈİ
-	blockquote:ÒıÓÃ
+ä¸‰.å¸¸ç”¨æ ‡ç­¾:
+	small:å‰¯æ ‡é¢˜
+	mark:å†…è”æ–‡æœ¬
+	del:å¸¦åˆ é™¤çº¿çš„æ–‡æœ¬
+	s:æ— ç”¨çš„æ–‡æœ¬(å¸¦åˆ é™¤çº¿)
+	ins:å¸¦ä¸‹åˆ’çº¿çš„æ–‡æœ¬
+	u:å¸¦ä¸‹åˆ’çº¿çš„æ–‡æœ¬
+	small:å°å·æ–‡æœ¬
+	strong:ç€é‡,å¼ºè°ƒ
+	em:æ–œä½“
+	abbr:ç¼©ç•¥è¯­,å½“é¼ æ ‡æ‚¬åœæ—¶æ˜¾ç¤ºtitleå±æ€§çš„å†…å®¹
+	blockquote:å¼•ç”¨
 	
 	
 		

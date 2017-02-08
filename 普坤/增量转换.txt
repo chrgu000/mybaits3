@@ -1,9 +1,9 @@
-
---ĞèÒªµÄÁĞ
+ï»¿
+--éœ€è¦çš„åˆ—
 select 'alter table '||table_name||' add(before_after_ VARCHAR2(30),deal_timestamp_ TIMESTAMP(6), op_flag_ VARCHAR2(30), sync_flag_ VARCHAR2(30),hostname_ VARCHAR2(30),dbuser_ VARCHAR2(30));' as sql from user_tables where table_name like '%_50';
 
---ÒªÓĞÖµµÄÁĞ
-deal_timestamp_ £º sysdate
+--è¦æœ‰å€¼çš„åˆ—
+deal_timestamp_ ï¼š sysdate
 op_flag_ : 'insert'
 SYNC_FLAG_=0
 

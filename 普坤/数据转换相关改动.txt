@@ -1,0 +1,4 @@
+﻿AbstractDataProcessManagementServiceImpl
+在该抽象类中加了检测必须的代码
+添加TableProcessState类
+添加/com.pktech.o2o.runtime/web/chart/total.ftl文件

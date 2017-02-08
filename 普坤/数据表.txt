@@ -1,0 +1,46 @@
+﻿select * from sm_user
+select * from sm_group
+select * from sm_groupuser
+select * from sm_permission
+select * from SM_ORGANIZATION 
+
+一、在线测试地址（基本版）
+  1.在线测试平台访问地址（电脑端）
+	http://timesheet.aceteamwork.com  
+  2.登录账号信息（有效期截至：2016年12月15日）
+    普通员工:staff01/ace2016
+	项目经理:pm01/ace2016
+	部门经理:dm01/ace2016
+
+
+1.用户
+	ID
+	名称
+	用户名
+	密码
+2.组织
+	ID
+	中文名
+	标识
+3.用户与组的关系
+	ID
+	用户
+	组织
+4.资源
+	ID
+	名称
+	标识
+	路径
+5.组织与资源的关系
+	ID
+	组织
+	资源
+
+6.项目
+	ID
+	名称
+
+普通员工
+	查询参与的项目
+	查询负责的项目
+		

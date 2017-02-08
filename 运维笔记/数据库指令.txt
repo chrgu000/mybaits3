@@ -1,4 +1,4 @@
-1. linuxÏÂÆô¶¯oracle 
+ï»¿1. linuxä¸‹å¯åŠ¨oracle 
 su - oracle 
 sqlplus /nolog 
 conn /as sysdba 
@@ -7,7 +7,7 @@ exit
 lsnrctl start 
 exit 
 
-2. linuxÏÂ¹Ø±Õoracle 
+2. linuxä¸‹å…³é—­oracle 
 su - oracle 
 
 sqlplus /nolog 
@@ -22,11 +22,11 @@ lsnrctl stop
 
 exit 
 
-3¡¢Æô¶¯¼àÌýÆ÷ 
+3ã€å¯åŠ¨ç›‘å¬å™¨ 
 oracle@suse92:~> lsnrctl start 
-4¡¢Í£Ö¹¼àÌýÆ÷ 
+4ã€åœæ­¢ç›‘å¬å™¨ 
 oracle@suse92:~> lsnrctl stop 
-5¡¢²é¿´¼àÌýÆ÷×´Ì¬ 
+5ã€æŸ¥çœ‹ç›‘å¬å™¨çŠ¶æ€ 
 oracle@suse92:~> lsnrctl 
 LSNRCTL> status 
 LSNRCTL> exit 

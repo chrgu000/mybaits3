@@ -1,18 +1,18 @@
-Ò».³£ÓÃÀàĞÍ
-	java.lang.Class	:ÀàĞÍ
-	java.lang.reflect.Constructor:¹¹Ôìº¯Êı
-	java.lang.reflect.Field:×Ö¶Î
-	java.lang.reflect.Method:·½·¨
-	java.lang.reflect.Modifier:ĞŞÊÎ·û
+ï»¿ä¸€.å¸¸ç”¨ç±»å‹
+	java.lang.Class	:ç±»å‹
+	java.lang.reflect.Constructor:æ„é€ å‡½æ•°
+	java.lang.reflect.Field:å­—æ®µ
+	java.lang.reflect.Method:æ–¹æ³•
+	java.lang.reflect.Modifier:ä¿®é¥°ç¬¦
 	
-¶ş.³£ÓÃ·½·¨
-	getDeclaredMethods:»ñÈ¡ËùÓĞ·½·¨
-	getReturnType:»ñÈ¡·½·¨µÄ·µ»ØÀàĞÍ
-	getParameterTypes:»ñÈ¡·½·¨µÄ´«Èë²ÎÊıÀàĞÍ
-	getDeclaredMethod:»ñÈ¡Ö¸¶¨·½·¨
-	getDeclaredConstructors:»ñÈ¡ËùÓĞµÄ¹¹Ôì·½·¨
-	getDeclaredConstructor:»ñÈ¡Ö¸¶¨µÄ¹¹Ôì·½·¨
-	getSuperclass:»ñÈ¡¸¸Àà
-	getInterfaces:»ñÈ¡ÊµÏÖµÄ½Ó¿Ú
+äºŒ.å¸¸ç”¨æ–¹æ³•
+	getDeclaredMethods:è·å–æ‰€æœ‰æ–¹æ³•
+	getReturnType:è·å–æ–¹æ³•çš„è¿”å›ç±»å‹
+	getParameterTypes:è·å–æ–¹æ³•çš„ä¼ å…¥å‚æ•°ç±»å‹
+	getDeclaredMethod:è·å–æŒ‡å®šæ–¹æ³•
+	getDeclaredConstructors:è·å–æ‰€æœ‰çš„æ„é€ æ–¹æ³•
+	getDeclaredConstructor:è·å–æŒ‡å®šçš„æ„é€ æ–¹æ³•
+	getSuperclass:è·å–çˆ¶ç±»
+	getInterfaces:è·å–å®ç°çš„æ¥å£
 
 	

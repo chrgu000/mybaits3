@@ -1,1 +1,1 @@
-REGEXP_REPLACE(INITCAP('AAA'||code), '(\w)[_]', '\1')	×ª»»ÍÕ·åÃüÃû·¨
+ï»¿REGEXP_REPLACE(INITCAP('AAA'||code), '(\w)[_]', '\1')	è½¬æ¢é©¼å³°å‘½åæ³•

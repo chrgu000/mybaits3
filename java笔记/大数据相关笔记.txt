@@ -1,11 +1,11 @@
-1.hadoopµÄ»·¾³´î½¨
-	ÔÚhadoop-env.sh½Å±¾ÀïÖ¸¶¨JAVA_HOME
-	ÔÚcore-site.xmlÎÄ¼şÀïÅäÖÃÎÄ¼şÏµÍ³µÄurl:fs.defaultFS:hdfs://bg:9000
-	ÔÚHDFS-site.xmlÀïÅäÖÃÎÄ¼ş¿éµÄ¸´ÖÆÊıÁ¿:dfs.replication:1
-	ÉèÖÃssh±¾»úÎŞÃÜÂëµÇÂ½
-	tail -f ²é¿´Ö»¶ÁÎÄ¼ş
+ï»¿1.hadoopçš„ç¯å¢ƒæ­å»º
+	åœ¨hadoop-env.shè„šæœ¬é‡ŒæŒ‡å®šJAVA_HOME
+	åœ¨core-site.xmlæ–‡ä»¶é‡Œé…ç½®æ–‡ä»¶ç³»ç»Ÿçš„url:fs.defaultFS:hdfs://bg:9000
+	åœ¨HDFS-site.xmlé‡Œé…ç½®æ–‡ä»¶å—çš„å¤åˆ¶æ•°é‡:dfs.replication:1
+	è®¾ç½®sshæœ¬æœºæ— å¯†ç ç™»é™†
+	tail -f æŸ¥çœ‹åªè¯»æ–‡ä»¶
 	
-2.ÅäÖÃÄ£°å
+2.é…ç½®æ¨¡æ¿
 	<configuration>
 		<property>	#
 			<name>hbase.rootdir</name>
@@ -17,67 +17,67 @@
 		</property>
 	</configuration>
 
-3.³£ÓÃÅäÖÃÏî:
+3.å¸¸ç”¨é…ç½®é¡¹:
 	core-site.xml:
-		fs.defaultFS					hdfs://bg:9000		ÕâÀïµÄÖµÖ¸µÄÊÇÄ¬ÈÏµÄHDFSÂ·¾¶¡£µ±ÓĞ¶à¸öHDFS¼¯ÈºÍ¬Ê±¹¤×÷Ê±£¬ÓÃ»§Èç¹û²»Ğ´¼¯ÈºÃû³Æ£¬ÄÇÃ´Ä¬ÈÏÊ¹ÓÃÄÄ¸öÄÄ£¿ÔÚÕâÀïÖ¸¶¨£¡¸ÃÖµÀ´×ÔÓÚhdfs-site.xmlÖĞµÄÅäÖÃ
-		hadoop.tmp.dir					/usr/local/tmp		ÕâÀïµÄÂ·¾¶Ä¬ÈÏÊÇNameNode¡¢DataNode¡¢JournalNodeµÈ´æ·ÅÊı¾İµÄ¹«¹²Ä¿Â¼¡£ÓÃ»§Ò²¿ÉÒÔ×Ô¼ºµ¥¶ÀÖ¸¶¨ÕâÈıÀà½ÚµãµÄÄ¿Â¼
+		fs.defaultFS					hdfs://bg:9000		è¿™é‡Œçš„å€¼æŒ‡çš„æ˜¯é»˜è®¤çš„HDFSè·¯å¾„ã€‚å½“æœ‰å¤šä¸ªHDFSé›†ç¾¤åŒæ—¶å·¥ä½œæ—¶ï¼Œç”¨æˆ·å¦‚æœä¸å†™é›†ç¾¤åç§°ï¼Œé‚£ä¹ˆé»˜è®¤ä½¿ç”¨å“ªä¸ªå“ªï¼Ÿåœ¨è¿™é‡ŒæŒ‡å®šï¼è¯¥å€¼æ¥è‡ªäºhdfs-site.xmlä¸­çš„é…ç½®
+		hadoop.tmp.dir					/usr/local/tmp		è¿™é‡Œçš„è·¯å¾„é»˜è®¤æ˜¯NameNodeã€DataNodeã€JournalNodeç­‰å­˜æ”¾æ•°æ®çš„å…¬å…±ç›®å½•ã€‚ç”¨æˆ·ä¹Ÿå¯ä»¥è‡ªå·±å•ç‹¬æŒ‡å®šè¿™ä¸‰ç±»èŠ‚ç‚¹çš„ç›®å½•
 	hdfs-site.xml:
-		dfs.replication					1					Ö¸¶¨Êı¾İ±¸·İ¼¸·İ
-		dfs.namenode.http-address		bg:50070			namenodeµÄ¼àÌı¶Ë¿Ú(Ìá¹©web·şÎñ)
-		fs.namenode.name.dir			/usr/local/name		NameNode½ÚµãµÄÊı¾İ´æ·ÅÄ¿Â¼
-		dfs.datanode.data.dir			/usr/local/data		DataNode½ÚµãµÄÊı¾İ´æ·ÅÄ¿Â¼
+		dfs.replication					1					æŒ‡å®šæ•°æ®å¤‡ä»½å‡ ä»½
+		dfs.namenode.http-address		bg:50070			namenodeçš„ç›‘å¬ç«¯å£(æä¾›webæœåŠ¡)
+		fs.namenode.name.dir			/usr/local/name		NameNodeèŠ‚ç‚¹çš„æ•°æ®å­˜æ”¾ç›®å½•
+		dfs.datanode.data.dir			/usr/local/data		DataNodeèŠ‚ç‚¹çš„æ•°æ®å­˜æ”¾ç›®å½•
 		ha.zookeeper.quorum				
 		
 		
-4.CDH°æ±¾°²×°
-	1.¹Ø±Õ·À»ğÇ½
+4.CDHç‰ˆæœ¬å®‰è£…
+	1.å…³é—­é˜²ç«å¢™
 		service iptables stop
-		chkconfig --list|grep iptables ²é¿´iptablesÊÇ·ñ¿ª»ú×ÔÆô
-		chkconfig iptables off ¹Ø±ÕiptablesµÄ¿ª»ú×ÔÆô
-	2.¹Ø±ÕSELINUX
-		vim /etc/sysconfig/selinux		´ò¿ªselinuxÅäÖÃÎÄ¼ş
-		SELINUX=disabled #Ôö¼Ó			¹Ø±Õselinux
-	3.ÅäÖÃhosts
-	4.ĞŞ¸ÄÖ÷»úÃû
-		hostname bg	ĞŞ¸ÄÖ÷»úÃûÎªbg
-		vim /etc/sysconfig/network	´ò¿ª°üº¬Ö÷»úÃûµÄÅäÖÃÎÄ¼ş
-	5.Ğ¶ÔØ×Ô´øµÄjdk
-		rpm -qa|grep jdk	²é¿´ÊÇ·ñ°²×°ÁËjdk
-		rpm -e ³ÌĞòÃû		Ğ¶ÔØ
-	6.Ìí¼ÓhadoopÓÃ»§
-		adduser hadoop	´´½¨hadoppÓÃ»§
-		passwd	hadoop	ÉèÖÃhadoopÃÜÂë
-		whoami ²é¿´µ±Ç°µÇÂ½µÄÓÃ»§
-		vim /etc/sudoers	È¨ÏŞÅäÖÃÎÄ¼ş
-		hadoop  ALL=(root)NOPASSWD:ALL ÉèÖÃhadoopÓÃ»§ÎŞÃÜÂëÊ¹ÓÃrootÈ¨ÏŞ
-	7.ÉèÖÃsshÎŞÃÜÔ¿µÇÂ½
-		ssh-key -t rsa Éú³ÉsshÃÜÔ¿
-		ssh-copy-id Ö÷»úÃû	¿½±´ssh¹«Ô¿µ½Ö¸¶¨Ö÷»ú
+		chkconfig --list|grep iptables æŸ¥çœ‹iptablesæ˜¯å¦å¼€æœºè‡ªå¯
+		chkconfig iptables off å…³é—­iptablesçš„å¼€æœºè‡ªå¯
+	2.å…³é—­SELINUX
+		vim /etc/sysconfig/selinux		æ‰“å¼€selinuxé…ç½®æ–‡ä»¶
+		SELINUX=disabled #å¢åŠ 			å…³é—­selinux
+	3.é…ç½®hosts
+	4.ä¿®æ”¹ä¸»æœºå
+		hostname bg	ä¿®æ”¹ä¸»æœºåä¸ºbg
+		vim /etc/sysconfig/network	æ‰“å¼€åŒ…å«ä¸»æœºåçš„é…ç½®æ–‡ä»¶
+	5.å¸è½½è‡ªå¸¦çš„jdk
+		rpm -qa|grep jdk	æŸ¥çœ‹æ˜¯å¦å®‰è£…äº†jdk
+		rpm -e ç¨‹åºå		å¸è½½
+	6.æ·»åŠ hadoopç”¨æˆ·
+		adduser hadoop	åˆ›å»ºhadoppç”¨æˆ·
+		passwd	hadoop	è®¾ç½®hadoopå¯†ç 
+		whoami æŸ¥çœ‹å½“å‰ç™»é™†çš„ç”¨æˆ·
+		vim /etc/sudoers	æƒé™é…ç½®æ–‡ä»¶
+		hadoop  ALL=(root)NOPASSWD:ALL è®¾ç½®hadoopç”¨æˆ·æ— å¯†ç ä½¿ç”¨rootæƒé™
+	7.è®¾ç½®sshæ— å¯†é’¥ç™»é™†
+		ssh-key -t rsa ç”Ÿæˆsshå¯†é’¥
+		ssh-copy-id ä¸»æœºå	æ‹·è´sshå…¬é’¥åˆ°æŒ‡å®šä¸»æœº
 
 5.YARN
-	hadoop¸÷ÅäÖÃÎÄ¼şµÄ×÷ÓÃ
-	core-site.xml	Í¨ÓÃÊôĞÔ
-	hdfs-site.xml	HDFSÊôĞÔ
-	mapred-site.xml	MapReduceÊôĞÔ
-	yarn-site.xml	YarnÊôĞÔ
+	hadoopå„é…ç½®æ–‡ä»¶çš„ä½œç”¨
+	core-site.xml	é€šç”¨å±æ€§
+	hdfs-site.xml	HDFSå±æ€§
+	mapred-site.xml	MapReduceå±æ€§
+	yarn-site.xml	Yarnå±æ€§
 	
-	°²×°»·¾³:
+	å®‰è£…ç¯å¢ƒ:
 		Linux
 		Hadoop
 		JDK
 		OpenSSH
 		
-6.ÓÃµ½µÄÃüÁî
-	addgroup hadoop ´´½¨hadoopÓÃ»§×é
-	adduser --ingroup hadoop hduser ´´½¨hduserÓÃ»§²¢°ÑËü¼ÓÈëhadoopÓÃ»§×éÖĞ
-	which java ²é¿´javaÃüÁîËùÔÚµÄÂ·¾¶
+6.ç”¨åˆ°çš„å‘½ä»¤
+	addgroup hadoop åˆ›å»ºhadoopç”¨æˆ·ç»„
+	adduser --ingroup hadoop hduser åˆ›å»ºhduserç”¨æˆ·å¹¶æŠŠå®ƒåŠ å…¥hadoopç”¨æˆ·ç»„ä¸­
+	which java æŸ¥çœ‹javaå‘½ä»¤æ‰€åœ¨çš„è·¯å¾„
 	
 7.ZooKeeper
-	°æ±¾:
-		version Êı¾İ½ÚµãÄÚÈİµÄ°æ±¾ºÅ
-		cversion µ±Ç°Êı¾İ½Úµã×Ó½ÚµãµÄ°æ±¾ºÅ
-		aversion µ±Ç°Êı¾İ½ÚµãACL±ä¸ü°æ±¾ºÅ
-	±¯¹ÛËøºÍÀÖ¹ÛËø:
-		±¯¹ÛËø:¾ßÓĞÇ¿ÁÒµÄÅÅËûĞÔ,ÔÚµ±Ç°ÊÂÎñ½áÊøÖ®Ç°,ÏÂÒ»¸öÊÂÎñ²»ÄÜ·ÃÎÊÏàÍ¬µÄ×ÊÔ´
-		ÀÖ¹ÛËø:Í¨¹ı°æ±¾ºÅÀ´¿ØÖÆ,µ±ĞŞ¸ÄÊı¾İÊ±ÑéÖ¤°æ±¾ºÅ,Èç¹ûÊı¾İÒÑ¾­ĞŞ¸Ä¹ıÔòÅ×³öÒì³£ÈÃ¿Í»§¶Ë×ÔĞĞ´¦Àí
+	ç‰ˆæœ¬:
+		version æ•°æ®èŠ‚ç‚¹å†…å®¹çš„ç‰ˆæœ¬å·
+		cversion å½“å‰æ•°æ®èŠ‚ç‚¹å­èŠ‚ç‚¹çš„ç‰ˆæœ¬å·
+		aversion å½“å‰æ•°æ®èŠ‚ç‚¹ACLå˜æ›´ç‰ˆæœ¬å·
+	æ‚²è§‚é”å’Œä¹è§‚é”:
+		æ‚²è§‚é”:å…·æœ‰å¼ºçƒˆçš„æ’ä»–æ€§,åœ¨å½“å‰äº‹åŠ¡ç»“æŸä¹‹å‰,ä¸‹ä¸€ä¸ªäº‹åŠ¡ä¸èƒ½è®¿é—®ç›¸åŒçš„èµ„æº
+		ä¹è§‚é”:é€šè¿‡ç‰ˆæœ¬å·æ¥æ§åˆ¶,å½“ä¿®æ”¹æ•°æ®æ—¶éªŒè¯ç‰ˆæœ¬å·,å¦‚æœæ•°æ®å·²ç»ä¿®æ”¹è¿‡åˆ™æŠ›å‡ºå¼‚å¸¸è®©å®¢æˆ·ç«¯è‡ªè¡Œå¤„ç†
 	

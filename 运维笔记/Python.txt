@@ -1,20 +1,20 @@
-1.ÒýÈëÓëÓ¦ÓÃ
-	import ÎÄ¼þÃû	ÒýÈëÒ»¸öÎÄ¼þ
-	from ÎÄ¼þÃû import ÀàÃû ÒýÓÃ
-2.ÌØÊâµÄÀàÊôÐÔ
-	__name__	ÀàµÄÃû×Ö
-	__doc__		ÎÄµµµÄ×Ö·û´®
-	__bases__	ÀàµÄËùÓÐ¸¸Àà
-	__dict__	ÀàµÄËùÓÐÊôÐÔ(×ÖµäµÄÐÎÊ½)
-	__module__	ÀàËùÔÚµÄÄ£¿é
-	__class__	ÀàÐÍ
-3.ÌØÊâµÄÊµÀýÊôÐÔ
-	__class__	ÊµÀýËù¶ÔÓ¦µÄÀà
-	__dict__	ÊµÀýËù¶ÔÓ¦µÄÊôÐÔ
-4.ÌØÊâµÄ·½·¨
-	__init__()	³õÊ¼»¯·½·¨
-	__new__()	¹¹ÔìÆ÷·½·¨(ÔÚinitÖ®Ç°,new·½·¨ÖÐ¿ÉÒÔÓÐreturn)
-	__del__()	½á¹¹Æ÷
-5.ÄÚÖÃº¯Êý
-	type		»ñÈ¡¶ÔÏóµÄÀàÐÍ
-	isinstance	ÅÐ¶Ï¶ÔÏóÊÇ²»ÊÇÒ»¸öÀà»òÕß×ÓÀàµÄÊµÀý
+ï»¿1.å¼•å…¥ä¸Žåº”ç”¨
+	import æ–‡ä»¶å	å¼•å…¥ä¸€ä¸ªæ–‡ä»¶
+	from æ–‡ä»¶å import ç±»å å¼•ç”¨
+2.ç‰¹æ®Šçš„ç±»å±žæ€§
+	__name__	ç±»çš„åå­—
+	__doc__		æ–‡æ¡£çš„å­—ç¬¦ä¸²
+	__bases__	ç±»çš„æ‰€æœ‰çˆ¶ç±»
+	__dict__	ç±»çš„æ‰€æœ‰å±žæ€§(å­—å…¸çš„å½¢å¼)
+	__module__	ç±»æ‰€åœ¨çš„æ¨¡å—
+	__class__	ç±»åž‹
+3.ç‰¹æ®Šçš„å®žä¾‹å±žæ€§
+	__class__	å®žä¾‹æ‰€å¯¹åº”çš„ç±»
+	__dict__	å®žä¾‹æ‰€å¯¹åº”çš„å±žæ€§
+4.ç‰¹æ®Šçš„æ–¹æ³•
+	__init__()	åˆå§‹åŒ–æ–¹æ³•
+	__new__()	æž„é€ å™¨æ–¹æ³•(åœ¨initä¹‹å‰,newæ–¹æ³•ä¸­å¯ä»¥æœ‰return)
+	__del__()	ç»“æž„å™¨
+5.å†…ç½®å‡½æ•°
+	type		èŽ·å–å¯¹è±¡çš„ç±»åž‹
+	isinstance	åˆ¤æ–­å¯¹è±¡æ˜¯ä¸æ˜¯ä¸€ä¸ªç±»æˆ–è€…å­ç±»çš„å®žä¾‹

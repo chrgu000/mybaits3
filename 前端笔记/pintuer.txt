@@ -1,80 +1,80 @@
-Ò».pintuerÇ°¶Ëcss¿ò¼Ü
-	(1):³£ÓÃmeta
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">	<!-- ¼æÈİÄ£Ê½´¦Àí -->
-		<meta name="renderer" content="webkit">	<!-- ¸ßËÙÄ£Ê½ -->
-		<meta content="telephone=no" name="format-detection">	<!-- ºöÂÔÊ¶±ğÊı×ÖÎªµç»°ºÅÂë -->
-	(2):ÈİÆ÷
-		ÈİÆ÷´óĞ¡:ÔÚ²»Í¬ÆÁÄ»´óĞ¡£¬.container£¬¾ßÌå±íÏÖÎª³¬Ğ¡ÆÁÄ»£º×Ô¶¯£»Ğ¡ÆÁÄ»£º760px£»ÖĞÆÁÄ»£º1000px£»´óÆÁÄ»£º1200px£»µ±²»ĞèÒªÏŞÖÆÈİÆ÷¿í¶ÈÊ±£¬ÇëÊ¹ÓÃ.container-layoutÈİÆ÷¡£
-		container:ÈİÆ÷×óÓÒ¸÷º¬10pxµÄÄÚÌî³ä(padding)
-		layout:¿í¶È100%µÄÈİÆ÷
-		container-layout:²»ÏŞÖÆ¿í¶ÈÈİÆ÷
-	(3):³£ÓÃ±êÇ©
-		h1-h6:±êÌâÑùÊ½,ÄÚÇ¶small±êÇ©Îª¸±±êÌâ
-		strong:¼Ó´ÖÎÄ±¾
-		i:Ğ±ÌåÎÄ±¾
-		a:³¬Á´½ÓÎÄ±¾
-		hr:Ë®Æ½Ïß(¿ÉÒÔÓĞ±³¾°É«)
-	(4):³£ÓÃÑùÊ½
-		text-indent:¶ÎÂäËõ½ø2×Ö·û
-		text-more:µ±ÎÄ±¾³¬³ö¿í¶Èºó½Ø¶ÏÎÄ±¾,²¢Ê¹ÓÃ...Ê¡ÂÔºÅ
-		ÎÄ±¾¶ÔÆë:text-
-			left:×ó¶ÔÆë center¾ÓÖĞ rightÓÒ¶ÔÆë justify±ê×¼¶ÔÆë
-		ÎÄ±¾´óĞ¡:text-
-			large:ÌØ´ó big:´ó default:Ä¬ÈÏ small:Ğ¡ little:ÌØĞ¡
-		ÎÄ±¾ÑÕÉ«:text-
-			main:Ö÷É« sub¸¨É« back±³¾°É« mixÈÚºÏÉ« dotµã×ºÉ«
-		ÎÄ±¾ĞĞ¾à:height-
-			large:ÌØ´ó big:´ó default:Ä¬ÈÏ small:Ğ¡ little:ÌØĞ¡
-		ÎÄ±¾»»ĞĞ:text-
-			break:Ä¬ÈÏ×Ô¶¯»»ĞĞ breakall:Ó¢ÎÄ×ÖÄ¸ÄÚ»»ĞĞ unbreak:²»»»ĞĞ
-		ÑÕÉ«:
-			text-ÑÕÉ«:ÎÄ±¾É« bg-ÑÕÉ«:±³¾°É« border-ÑÕÉ«:±ß¿òÉ« bg-inverse:µ±Ê¹ÓÃÉîÉ«±³¾°Ê±ÎÄ×Ö·´É«
-		±ß¿ò´óĞ¡:border- (border Ä¬ÈÏ1px)
-			large:ÌØ´ó big:´ó default:Ä¬ÈÏ small:Ğ¡ little:ÌØĞ¡ 
-		±ß¿òÎ»ÖÃ:border-
-			top:ÉÏ bottom:ÏÂ left:×ó right:ÓÒ top-bottom:ÉÏÏÂ left-right:×óÓÒ
-		±ß¿òÑùÊ½:border-
-			dashed:ĞéÏß dotted:µã double:Ë«Ïß inset:ÄÚ°¼ outset:ÍâÍ¹
-		Ô²½Ç:radius-		(ÔÚIE8¼°ÒÔÏÂä¯ÀÀÆ÷²»Ö§³Ö)
-			small:Ğ¡Ô²½Ç big:´óÔ²½Ç rounded:ÈÆÔ²½Ç circle:Ô²
-		ÒõÓ°:box-shadow-	(ÔÚIE8¼°ÒÔÏÂä¯ÀÀÆ÷²»Ö§³Ö)
-			small:Ğ¡ÒõÓ° big:´óÒõÓ° none:ÎŞÒõÓ°
-		±ß½çÎ»ÖÃ:margin-
-			top:ÉÏ bottom:ÏÂ left:×ó right:ÓÒ
-		±ß½ç´óĞ¡:
-			large:ÌØ´ó big:´ó small:Ğ¡ little:ÌØĞ¡ 
-		±ß½ç´óĞ¡Î»ÖÃ×éºÏ:margin-´óĞ¡-Î»ÖÃ
-		Ìî³äÎ»ÖÃ(ÄÚ±ß¾à):padding-
-			top:ÉÏ bottom:ÏÂ left:×ó right:ÓÒ
-		Ìî³ä´óĞ¡(ÄÚ±ß¾à):padding-
-			large:ÌØ´ó big:´ó small:Ğ¡ little:ÌØĞ¡ 
-		Ìî³ä´óĞ¡Î»ÖÃ×éºÏ:padding-´óĞ¡-Î»ÖÃ
-		Í¼Æ¬Íâ±ß¿ò:img-border
-		img-responsive:ÏìÓ¦Ê½Í¼Æ¬100%¿í¶È,µ«²»³¬¹ı¸¸ÔªËØ
-		±íµ¥:input-
-			large:ÌØ´ó big:´ó small:Ğ¡ little:ÌØĞ¡ 
-		°´Å¥´óĞ¡:button-
-			large:ÌØ´ó big:´ó small:Ğ¡ little:ÌØĞ¡ block:ÏìÓ¦Ê½´óĞ¡
-		Í¼±ê:icon-
-			heart:ĞÄ search:ËÑË÷ spinner:¼ÓÔØ
-		±í¸ñ:table-
-			striped:ÌõÎÆ±í¸ñ bordered:´ø±ß¿ò±í¸ñ hover:´øĞüÍ£Ğ§¹û±í¸ñ condensed:½ôËõ±í¸ñ responsive:ÏìÓ¦Ê½±í¸ñ
-		¸¡¶¯:float-
-			left:×ó right:ÓÒ
-		Çå³ı¸¡¶¯:clearfix
-		Í¸Ã÷:opacity-
-			small:20% middle:50% big:80% none:²»Í¸Ã÷
+ï»¿ä¸€.pintuerå‰ç«¯cssæ¡†æ¶
+	(1):å¸¸ç”¨meta
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">	<!-- å…¼å®¹æ¨¡å¼å¤„ç† -->
+		<meta name="renderer" content="webkit">	<!-- é«˜é€Ÿæ¨¡å¼ -->
+		<meta content="telephone=no" name="format-detection">	<!-- å¿½ç•¥è¯†åˆ«æ•°å­—ä¸ºç”µè¯å·ç  -->
+	(2):å®¹å™¨
+		å®¹å™¨å¤§å°:åœ¨ä¸åŒå±å¹•å¤§å°ï¼Œ.containerï¼Œå…·ä½“è¡¨ç°ä¸ºè¶…å°å±å¹•ï¼šè‡ªåŠ¨ï¼›å°å±å¹•ï¼š760pxï¼›ä¸­å±å¹•ï¼š1000pxï¼›å¤§å±å¹•ï¼š1200pxï¼›å½“ä¸éœ€è¦é™åˆ¶å®¹å™¨å®½åº¦æ—¶ï¼Œè¯·ä½¿ç”¨.container-layoutå®¹å™¨ã€‚
+		container:å®¹å™¨å·¦å³å„å«10pxçš„å†…å¡«å……(padding)
+		layout:å®½åº¦100%çš„å®¹å™¨
+		container-layout:ä¸é™åˆ¶å®½åº¦å®¹å™¨
+	(3):å¸¸ç”¨æ ‡ç­¾
+		h1-h6:æ ‡é¢˜æ ·å¼,å†…åµŒsmallæ ‡ç­¾ä¸ºå‰¯æ ‡é¢˜
+		strong:åŠ ç²—æ–‡æœ¬
+		i:æ–œä½“æ–‡æœ¬
+		a:è¶…é“¾æ¥æ–‡æœ¬
+		hr:æ°´å¹³çº¿(å¯ä»¥æœ‰èƒŒæ™¯è‰²)
+	(4):å¸¸ç”¨æ ·å¼
+		text-indent:æ®µè½ç¼©è¿›2å­—ç¬¦
+		text-more:å½“æ–‡æœ¬è¶…å‡ºå®½åº¦åæˆªæ–­æ–‡æœ¬,å¹¶ä½¿ç”¨...çœç•¥å·
+		æ–‡æœ¬å¯¹é½:text-
+			left:å·¦å¯¹é½ centerå±…ä¸­ rightå³å¯¹é½ justifyæ ‡å‡†å¯¹é½
+		æ–‡æœ¬å¤§å°:text-
+			large:ç‰¹å¤§ big:å¤§ default:é»˜è®¤ small:å° little:ç‰¹å°
+		æ–‡æœ¬é¢œè‰²:text-
+			main:ä¸»è‰² subè¾…è‰² backèƒŒæ™¯è‰² mixèåˆè‰² dotç‚¹ç¼€è‰²
+		æ–‡æœ¬è¡Œè·:height-
+			large:ç‰¹å¤§ big:å¤§ default:é»˜è®¤ small:å° little:ç‰¹å°
+		æ–‡æœ¬æ¢è¡Œ:text-
+			break:é»˜è®¤è‡ªåŠ¨æ¢è¡Œ breakall:è‹±æ–‡å­—æ¯å†…æ¢è¡Œ unbreak:ä¸æ¢è¡Œ
+		é¢œè‰²:
+			text-é¢œè‰²:æ–‡æœ¬è‰² bg-é¢œè‰²:èƒŒæ™¯è‰² border-é¢œè‰²:è¾¹æ¡†è‰² bg-inverse:å½“ä½¿ç”¨æ·±è‰²èƒŒæ™¯æ—¶æ–‡å­—åè‰²
+		è¾¹æ¡†å¤§å°:border- (border é»˜è®¤1px)
+			large:ç‰¹å¤§ big:å¤§ default:é»˜è®¤ small:å° little:ç‰¹å° 
+		è¾¹æ¡†ä½ç½®:border-
+			top:ä¸Š bottom:ä¸‹ left:å·¦ right:å³ top-bottom:ä¸Šä¸‹ left-right:å·¦å³
+		è¾¹æ¡†æ ·å¼:border-
+			dashed:è™šçº¿ dotted:ç‚¹ double:åŒçº¿ inset:å†…å‡¹ outset:å¤–å‡¸
+		åœ†è§’:radius-		(åœ¨IE8åŠä»¥ä¸‹æµè§ˆå™¨ä¸æ”¯æŒ)
+			small:å°åœ†è§’ big:å¤§åœ†è§’ rounded:ç»•åœ†è§’ circle:åœ†
+		é˜´å½±:box-shadow-	(åœ¨IE8åŠä»¥ä¸‹æµè§ˆå™¨ä¸æ”¯æŒ)
+			small:å°é˜´å½± big:å¤§é˜´å½± none:æ— é˜´å½±
+		è¾¹ç•Œä½ç½®:margin-
+			top:ä¸Š bottom:ä¸‹ left:å·¦ right:å³
+		è¾¹ç•Œå¤§å°:
+			large:ç‰¹å¤§ big:å¤§ small:å° little:ç‰¹å° 
+		è¾¹ç•Œå¤§å°ä½ç½®ç»„åˆ:margin-å¤§å°-ä½ç½®
+		å¡«å……ä½ç½®(å†…è¾¹è·):padding-
+			top:ä¸Š bottom:ä¸‹ left:å·¦ right:å³
+		å¡«å……å¤§å°(å†…è¾¹è·):padding-
+			large:ç‰¹å¤§ big:å¤§ small:å° little:ç‰¹å° 
+		å¡«å……å¤§å°ä½ç½®ç»„åˆ:padding-å¤§å°-ä½ç½®
+		å›¾ç‰‡å¤–è¾¹æ¡†:img-border
+		img-responsive:å“åº”å¼å›¾ç‰‡100%å®½åº¦,ä½†ä¸è¶…è¿‡çˆ¶å…ƒç´ 
+		è¡¨å•:input-
+			large:ç‰¹å¤§ big:å¤§ small:å° little:ç‰¹å° 
+		æŒ‰é’®å¤§å°:button-
+			large:ç‰¹å¤§ big:å¤§ small:å° little:ç‰¹å° block:å“åº”å¼å¤§å°
+		å›¾æ ‡:icon-
+			heart:å¿ƒ search:æœç´¢ spinner:åŠ è½½
+		è¡¨æ ¼:table-
+			striped:æ¡çº¹è¡¨æ ¼ bordered:å¸¦è¾¹æ¡†è¡¨æ ¼ hover:å¸¦æ‚¬åœæ•ˆæœè¡¨æ ¼ condensed:ç´§ç¼©è¡¨æ ¼ responsive:å“åº”å¼è¡¨æ ¼
+		æµ®åŠ¨:float-
+			left:å·¦ right:å³
+		æ¸…é™¤æµ®åŠ¨:clearfix
+		é€æ˜:opacity-
+			small:20% middle:50% big:80% none:ä¸é€æ˜
 		
-	(5):¶¯»­ÑùÊ½
-		µ­Èë:fadein-
-			top:ÉÏ bottom:ÏÂ left:×ó right:ÓÒ
-		µ­³ö:fadeout-
-			top:ÉÏ bottom:ÏÂ left:×ó right:ÓÒ
-		Ç¿µ÷:
-			bounce:µ¯Ìø bouncein:µ¯Èë bounctout:µ¯³ö rotatein:×ªÈë rotateout:×ª³ö flash:ÉÁË¸ shake:Õğ²ü swing:Ò¡°Ú wobble:Ò¡»Î ring:ÕğÁå
-		Ğü¸¡Ğ§¹û:Ç¿µ÷-hover
-		Ğı×ª:rotate
-		Ğü¸¡Ğı×ª:rotate-hover
+	(5):åŠ¨ç”»æ ·å¼
+		æ·¡å…¥:fadein-
+			top:ä¸Š bottom:ä¸‹ left:å·¦ right:å³
+		æ·¡å‡º:fadeout-
+			top:ä¸Š bottom:ä¸‹ left:å·¦ right:å³
+		å¼ºè°ƒ:
+			bounce:å¼¹è·³ bouncein:å¼¹å…¥ bounctout:å¼¹å‡º rotatein:è½¬å…¥ rotateout:è½¬å‡º flash:é—ªçƒ shake:éœ‡é¢¤ swing:æ‘‡æ‘† wobble:æ‘‡æ™ƒ ring:éœ‡é“ƒ
+		æ‚¬æµ®æ•ˆæœ:å¼ºè°ƒ-hover
+		æ—‹è½¬:rotate
+		æ‚¬æµ®æ—‹è½¬:rotate-hover
 			
 			
 		

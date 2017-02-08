@@ -1,88 +1,88 @@
-Ò».¿ª·¢×¼±¸
-	jar°ü:
+ï»¿ä¸€.å¼€å‘å‡†å¤‡
+	jaråŒ…:
 		maven:activiti-engine
-	²å¼þ:
+	æ’ä»¶:
 		http://activiti.org/designer/update/
 
-¶þ.ÅäÖÃ
-	ÅäÖÃprocessEngineConfiguration:
-		ÊµÏÖÀà:
-			StandaloneProcessEngineConfiguration:µ¥¶ÀÔËÐÐµÄÁ÷³ÌÒýÇæ,Activiti×Ô¼º´¦ÀíÊÂÎñ,Êý¾Ý¿âÖ»ÔÚÆô¶¯Ê±¼ì²â,Ã»ÓÐ½«»á±¨´í
-			StandaloneInMemProcessEngineConfiguration:µ¥Ôª²âÊÔÊ±µÄ¸¨ÖúÀà,Activiti×Ô¼º´¦ÀíÊÂÎñ,Ä¬ÈÏÊ¹ÓÃH2ÄÚ´æÊý¾Ý¿â,Êý¾Ý±í»áÔÚÆô¶¯Ê±´´½¨,¹Ø±ÕÊ±É¾³ý
-			SpringProcessEngineConfiguration:ÔÚSpring»·¾³ÏÂÊ¹ÓÃµÄÁ÷³ÌÒýÇæ
-			JtaProcessEngineConfiguration:µ¥¶ÀÔËÐÐµÄÁ÷³ÌÒýÇæ,²¢Ê¹ÓÃJTAÊÂÎñ
-		²ÎÊý:
-			dataSource:Êý¾ÝÔ´
-			databaseType:Êý¾Ý¿âÀàÐÍ,¿ÉÄÜµÄÖµÓÐ:h2, mysql, oracle, postgres, mssql, db2
-			databaseSchemaUpdate:Á÷³ÌÒýÇæÆô¶¯ºÍ¹Ø±ÕÊ±ÈçºÎ´¦ÀíÊý¾Ý±í.false:Èç¹ûÊý¾Ý±í°æ±¾ºÍÒÀÀµ¿â°æ±¾²»Æ¥ÅäÔòÅ×³öÒì³£,true:Èç¹ûÐèÒª¾Í¸üÐÂ,²»´æÔÚ¾Í´´½¨.create-drop:¿ªÆôÊ±´´½¨,¹Ø±ÕÊ±É¾³ý
-			jndiName:Ê¹ÓÃjndiÊý¾ÝÔ´Ê±ÅäÖÃÊý¾ÝÔ´
-			beans:ÅäÖÃÁË±©Â¶µÄbean,Ä¬ÈÏ×´Ì¬ÏÂËùÓÐµÄspringµÄbean¶¼ÊÇ±©Â¶µÄ
-			processDefinitionCacheLimit:ÅäÖÃÁ÷³Ì¶¨ÒåµÄ»º´æ¸öÊý
-			eventListeners:ÅäÖÃÈÎºÎÊÂ¼þ¶¼ÄÜ´¥·¢µÄÊÂ¼þ¼àÌýÆ÷
-			typedEventListeners:ÅäÖÃÌØ¶¨ÊÂ¼þ²Å»á´¥·¢µÄ¼àÌýÆ÷,keyÊÇ¶ººÅ·Ö¸îµÄÊÂ¼þ,valueÊÇ¼àÌýÆ÷
+äºŒ.é…ç½®
+	é…ç½®processEngineConfiguration:
+		å®žçŽ°ç±»:
+			StandaloneProcessEngineConfiguration:å•ç‹¬è¿è¡Œçš„æµç¨‹å¼•æ“Ž,Activitiè‡ªå·±å¤„ç†äº‹åŠ¡,æ•°æ®åº“åªåœ¨å¯åŠ¨æ—¶æ£€æµ‹,æ²¡æœ‰å°†ä¼šæŠ¥é”™
+			StandaloneInMemProcessEngineConfiguration:å•å…ƒæµ‹è¯•æ—¶çš„è¾…åŠ©ç±»,Activitiè‡ªå·±å¤„ç†äº‹åŠ¡,é»˜è®¤ä½¿ç”¨H2å†…å­˜æ•°æ®åº“,æ•°æ®è¡¨ä¼šåœ¨å¯åŠ¨æ—¶åˆ›å»º,å…³é—­æ—¶åˆ é™¤
+			SpringProcessEngineConfiguration:åœ¨SpringçŽ¯å¢ƒä¸‹ä½¿ç”¨çš„æµç¨‹å¼•æ“Ž
+			JtaProcessEngineConfiguration:å•ç‹¬è¿è¡Œçš„æµç¨‹å¼•æ“Ž,å¹¶ä½¿ç”¨JTAäº‹åŠ¡
+		å‚æ•°:
+			dataSource:æ•°æ®æº
+			databaseType:æ•°æ®åº“ç±»åž‹,å¯èƒ½çš„å€¼æœ‰:h2, mysql, oracle, postgres, mssql, db2
+			databaseSchemaUpdate:æµç¨‹å¼•æ“Žå¯åŠ¨å’Œå…³é—­æ—¶å¦‚ä½•å¤„ç†æ•°æ®è¡¨.false:å¦‚æžœæ•°æ®è¡¨ç‰ˆæœ¬å’Œä¾èµ–åº“ç‰ˆæœ¬ä¸åŒ¹é…åˆ™æŠ›å‡ºå¼‚å¸¸,true:å¦‚æžœéœ€è¦å°±æ›´æ–°,ä¸å­˜åœ¨å°±åˆ›å»º.create-drop:å¼€å¯æ—¶åˆ›å»º,å…³é—­æ—¶åˆ é™¤
+			jndiName:ä½¿ç”¨jndiæ•°æ®æºæ—¶é…ç½®æ•°æ®æº
+			beans:é…ç½®äº†æš´éœ²çš„bean,é»˜è®¤çŠ¶æ€ä¸‹æ‰€æœ‰çš„springçš„beanéƒ½æ˜¯æš´éœ²çš„
+			processDefinitionCacheLimit:é…ç½®æµç¨‹å®šä¹‰çš„ç¼“å­˜ä¸ªæ•°
+			eventListeners:é…ç½®ä»»ä½•äº‹ä»¶éƒ½èƒ½è§¦å‘çš„äº‹ä»¶ç›‘å¬å™¨
+			typedEventListeners:é…ç½®ç‰¹å®šäº‹ä»¶æ‰ä¼šè§¦å‘çš„ç›‘å¬å™¨,keyæ˜¯é€—å·åˆ†å‰²çš„äº‹ä»¶,valueæ˜¯ç›‘å¬å™¨
 		
 	
 	
-Èý.ÒµÎñÄ£ÐÍ×¢½âBPMN2.0
-	Í¼ÐÎÒâÒå:
-		¾ØÐÎ:»î¶¯
-		Ìõ¼þ:ÁâÐÎ
-		Ô²È¦:ÊÂ¼þ
-	»ù±¾ÀàÐÍ:
-		Á÷¶ÔÏó:Ò»¸öÒµÎñÁ÷³ÌÍ¼ÓÐÈýÖÖÁ÷¶ÔÏóµÄºËÐÄÔªËØ,·Ö±ðÊÇ:
-			ÊÂ¼þ:±íÊ¾Ò»¸öÒµÎñÁ÷³ÌÆÚ¼ä·¢ÉúµÄ¶«Î÷,Ó°ÏìÁ÷³ÌµÄÁ÷¶¯,Ò»°ãÓÐÒ»¸öÔ­Òò(´¥·¢Æ÷)»òÕßÒ»¸öÓ°Ïì(½á¹û),·ÖÎª¿ªÊ¼ÊÂ¼þ,ÖÐ¼äÊÂ¼þºÍ½áÊøÊÂ¼þ
-			»î¶¯:¿ÉÒÔÓÉ¶à¸ö»î¶¯×é³ÉÒ»¸ö»î¶¯,»î¶¯ÀàÐÍ°üÀ¨ÈÎÎñºÍ×ÓÁ÷³Ì,×ÓÁ÷³ÌÔÚÁ÷³ÌÏÂ·¢ÖÐ¼äÍâ¼ÓÒ»¸ö"+"ºÅÀ´Çø·Ö
-			Ìõ¼þ:ÓÃÓÚ¿ØÖÆÐòÁÐÁ÷µÄ·ÖÖ§ºÍºÏ²¢,»¹¿ÉÒÔ×÷ÎªÑ¡Ôñ»¹°üÀ¨Â·¾¶µÄ·ÖÖ§ÓëºÏ²¢,ÆäÄÚ²¿±ê¼Ç»á¸ø³ö¿ØÖÆÁ÷µÄÀàÐÍ
-		Á¬½Ó¶ÔÏó:Á¬½Ó¶ÔÏó½«Á÷¶ÔÏóÁ¬½ÓÆðÀ´ÐÎ³ÉÒ»¸ö»ù±¾µÄÁ÷³Ì½á¹¹,Á¬½Ó¶ÔÏó°üÀ¨:
-			Ë³ÐòÁ÷:ÓÃÒ»¸ö´øÊµÐÄ¼ýÍ·µÄ´©ÐÄÏß±íÊ¾,ÓÃÓÚÖ¸¶¨»î¶¯µÄÏÈºóË³Ðò
-			ÏûÏ¢Á÷:ÓÃÒ»¸ö´øÓÐ¿ª¼ýÍ·µÄÐéÏß±íÊ¾,ÓÃÓÚÃèÊöÁ½¸ö¶ÀÁ¢ÒµÎñµÄ²ÎÓëÕßÖ®¼ä·¢ËÍºÍ½ÓÊÜÏûÏ¢µÄÁ÷¶¯
-			¹ØÁª:ÓÃÒ»¸ù´øÓÐÏß¼ýÍ·µÄµãÏß±íÊ¾ÓÃÓÚ½«Ïà¹ØµÄÊý¾ÝÎÄ±¾ºÍÆäËû¹¤ÈËµÄÐÅÏ¢ÓëÁ÷¶ÔÏóÁªÏµÆðÀ´,¹ØÁªÓÃÓÚÕ¹Ê¾»î¶¯µÄÊäÈëÓëÊä³ö
-		Ó¾µÀ:¸ºÔð½«»î¶¯»®·Öµ½²»Í¬µÄ¿ÉÊÓ»¯Àà±ðÖÐÀ´ÃèÊöÓÉ²»Í¨²ÎÓëÕßµÄÔðÈÎÓëÖ°Ôð,°üÀ¨Á½ÖÖÓ¾µÀ¹¹¼þ:
-			³Ø:ÃèÊöÒ»¸ö²ÎÓëÕß,¿ÉÒÔ¿´×÷ÊÇ½«Ò»ÏµÁÐ»î¶¯Çø±ðÆäËû³ØµÄÒ»¸öÍ¼ÐÎÈÝÆ÷
-			µÀ:ÓÃÓÚ×éÖ¯ºÍ·ÖÀà»î¶¯
-		ÈË¹¤ÐÅÏ¢:×÷Îª±¸×¢,±ãÓÚÈËÔ±Àí½â
-			Êý¾Ý¶ÔÏó:ÏÔÊ¾»î¶¯ÊÇÈçºÎ²úÉúÊý¾ÝµÄ,Í¨¹ý¹ØÁª½«»î¶¯Á¬½ÓÆðÀ´
-			×é:ÓÃÒ»¸öÐéÏßÔ²½Ç¾ØÐÎÀ´±íÊ¾,ÓÃÓÚ¼ÇÂ¼ºÍ·ÖÎö,²»Ó°ÏìË³ÐòÁ÷
-			×¢ÊÍ:--×¢ÊÍ
+ä¸‰.ä¸šåŠ¡æ¨¡åž‹æ³¨è§£BPMN2.0
+	å›¾å½¢æ„ä¹‰:
+		çŸ©å½¢:æ´»åŠ¨
+		æ¡ä»¶:è±å½¢
+		åœ†åœˆ:äº‹ä»¶
+	åŸºæœ¬ç±»åž‹:
+		æµå¯¹è±¡:ä¸€ä¸ªä¸šåŠ¡æµç¨‹å›¾æœ‰ä¸‰ç§æµå¯¹è±¡çš„æ ¸å¿ƒå…ƒç´ ,åˆ†åˆ«æ˜¯:
+			äº‹ä»¶:è¡¨ç¤ºä¸€ä¸ªä¸šåŠ¡æµç¨‹æœŸé—´å‘ç”Ÿçš„ä¸œè¥¿,å½±å“æµç¨‹çš„æµåŠ¨,ä¸€èˆ¬æœ‰ä¸€ä¸ªåŽŸå› (è§¦å‘å™¨)æˆ–è€…ä¸€ä¸ªå½±å“(ç»“æžœ),åˆ†ä¸ºå¼€å§‹äº‹ä»¶,ä¸­é—´äº‹ä»¶å’Œç»“æŸäº‹ä»¶
+			æ´»åŠ¨:å¯ä»¥ç”±å¤šä¸ªæ´»åŠ¨ç»„æˆä¸€ä¸ªæ´»åŠ¨,æ´»åŠ¨ç±»åž‹åŒ…æ‹¬ä»»åŠ¡å’Œå­æµç¨‹,å­æµç¨‹åœ¨æµç¨‹ä¸‹å‘ä¸­é—´å¤–åŠ ä¸€ä¸ª"+"å·æ¥åŒºåˆ†
+			æ¡ä»¶:ç”¨äºŽæŽ§åˆ¶åºåˆ—æµçš„åˆ†æ”¯å’Œåˆå¹¶,è¿˜å¯ä»¥ä½œä¸ºé€‰æ‹©è¿˜åŒ…æ‹¬è·¯å¾„çš„åˆ†æ”¯ä¸Žåˆå¹¶,å…¶å†…éƒ¨æ ‡è®°ä¼šç»™å‡ºæŽ§åˆ¶æµçš„ç±»åž‹
+		è¿žæŽ¥å¯¹è±¡:è¿žæŽ¥å¯¹è±¡å°†æµå¯¹è±¡è¿žæŽ¥èµ·æ¥å½¢æˆä¸€ä¸ªåŸºæœ¬çš„æµç¨‹ç»“æž„,è¿žæŽ¥å¯¹è±¡åŒ…æ‹¬:
+			é¡ºåºæµ:ç”¨ä¸€ä¸ªå¸¦å®žå¿ƒç®­å¤´çš„ç©¿å¿ƒçº¿è¡¨ç¤º,ç”¨äºŽæŒ‡å®šæ´»åŠ¨çš„å…ˆåŽé¡ºåº
+			æ¶ˆæ¯æµ:ç”¨ä¸€ä¸ªå¸¦æœ‰å¼€ç®­å¤´çš„è™šçº¿è¡¨ç¤º,ç”¨äºŽæè¿°ä¸¤ä¸ªç‹¬ç«‹ä¸šåŠ¡çš„å‚ä¸Žè€…ä¹‹é—´å‘é€å’ŒæŽ¥å—æ¶ˆæ¯çš„æµåŠ¨
+			å…³è”:ç”¨ä¸€æ ¹å¸¦æœ‰çº¿ç®­å¤´çš„ç‚¹çº¿è¡¨ç¤ºç”¨äºŽå°†ç›¸å…³çš„æ•°æ®æ–‡æœ¬å’Œå…¶ä»–å·¥äººçš„ä¿¡æ¯ä¸Žæµå¯¹è±¡è”ç³»èµ·æ¥,å…³è”ç”¨äºŽå±•ç¤ºæ´»åŠ¨çš„è¾“å…¥ä¸Žè¾“å‡º
+		æ³³é“:è´Ÿè´£å°†æ´»åŠ¨åˆ’åˆ†åˆ°ä¸åŒçš„å¯è§†åŒ–ç±»åˆ«ä¸­æ¥æè¿°ç”±ä¸é€šå‚ä¸Žè€…çš„è´£ä»»ä¸ŽèŒè´£,åŒ…æ‹¬ä¸¤ç§æ³³é“æž„ä»¶:
+			æ± :æè¿°ä¸€ä¸ªå‚ä¸Žè€…,å¯ä»¥çœ‹ä½œæ˜¯å°†ä¸€ç³»åˆ—æ´»åŠ¨åŒºåˆ«å…¶ä»–æ± çš„ä¸€ä¸ªå›¾å½¢å®¹å™¨
+			é“:ç”¨äºŽç»„ç»‡å’Œåˆ†ç±»æ´»åŠ¨
+		äººå·¥ä¿¡æ¯:ä½œä¸ºå¤‡æ³¨,ä¾¿äºŽäººå‘˜ç†è§£
+			æ•°æ®å¯¹è±¡:æ˜¾ç¤ºæ´»åŠ¨æ˜¯å¦‚ä½•äº§ç”Ÿæ•°æ®çš„,é€šè¿‡å…³è”å°†æ´»åŠ¨è¿žæŽ¥èµ·æ¥
+			ç»„:ç”¨ä¸€ä¸ªè™šçº¿åœ†è§’çŸ©å½¢æ¥è¡¨ç¤º,ç”¨äºŽè®°å½•å’Œåˆ†æž,ä¸å½±å“é¡ºåºæµ
+			æ³¨é‡Š:--æ³¨é‡Š
 
-ËÄ.API±Ê¼Ç
-	1).Í¬²½ÓÃ»§Êý¾Ý
-		ActivitiÌá¹©ÁËIdentityService½Ó¿Ú,¿ÉÒÔ²Ù×÷ACT_ID_*µÄÊý¾Ý
-	2).ÊÂ¼þ¼àÌýÆ÷
-		ÊÂ¼þ¼àÌýÆ÷±ØÐëÊµÏÖActivitiEventListener½Ó¿Ú,ÆäÖÐonEventÐ´¼àÌýµÄÂß¼­´úÂë,isFailOnExceptionµÄ·µ»ØÖµ¾ö¶¨ÊÂ¼þonEvent³öÏÖÒì³£Ê±ÈçºÎ´¦ÀífalseÎªºöÂÔ,trueÎªÏòÉÏÅ×
-		BaseEntityEventListener:Õâ¸öÊÂ¼þ¼àÌýÆ÷ÓÃÀ´ÊµÏÖÊµÌåÏà¹ØµÄÊÂ¼þ
-		ÔÚ³ÌÐòÔËÐÐÊ±¿ÉÒÔÍ¨¹ýRuntimeServiceµÄaddEventListenerºÍremoveEventListenerµÈ½Ó¿ÚÀ´Ìí¼ÓºÍÒÆ³ýÊÂ¼þ¼àÌýÆ÷,ÔÚÔËÐÐÆÚÌí¼ÓµÄ¼àÌýÆ÷ÒýÇæÖØÆôÊ±Ê§Ð§
+å››.APIç¬”è®°
+	1).åŒæ­¥ç”¨æˆ·æ•°æ®
+		Activitiæä¾›äº†IdentityServiceæŽ¥å£,å¯ä»¥æ“ä½œACT_ID_*çš„æ•°æ®
+	2).äº‹ä»¶ç›‘å¬å™¨
+		äº‹ä»¶ç›‘å¬å™¨å¿…é¡»å®žçŽ°ActivitiEventListeneræŽ¥å£,å…¶ä¸­onEventå†™ç›‘å¬çš„é€»è¾‘ä»£ç ,isFailOnExceptionçš„è¿”å›žå€¼å†³å®šäº‹ä»¶onEventå‡ºçŽ°å¼‚å¸¸æ—¶å¦‚ä½•å¤„ç†falseä¸ºå¿½ç•¥,trueä¸ºå‘ä¸ŠæŠ›
+		BaseEntityEventListener:è¿™ä¸ªäº‹ä»¶ç›‘å¬å™¨ç”¨æ¥å®žçŽ°å®žä½“ç›¸å…³çš„äº‹ä»¶
+		åœ¨ç¨‹åºè¿è¡Œæ—¶å¯ä»¥é€šè¿‡RuntimeServiceçš„addEventListenerå’ŒremoveEventListenerç­‰æŽ¥å£æ¥æ·»åŠ å’Œç§»é™¤äº‹ä»¶ç›‘å¬å™¨,åœ¨è¿è¡ŒæœŸæ·»åŠ çš„ç›‘å¬å™¨å¼•æ“Žé‡å¯æ—¶å¤±æ•ˆ
 		
-Îå.Êý¾Ý¿â±íº¬Òå
-	ACT_RE_*:'RE'±íÊ¾repository,ÓÃÓÚ´æ´¢Á÷³Ì¶¨ÒåºÍÁ÷³Ì¾²Ì¬×ÊÔ´
-	ACT_RU_*:'RU'±íÊ¾runtime,°üº¬ÁËÁ÷³ÌÊµÀý,ÈÎÎñ,±äÁ¿,Òì²½ÈÎÎñµÈÔËÐÐÖÐµÄÊý¾ÝÕâÐ©±íµÄÊý¾ÝÔÚÊµÀýÔËÐÐÍê±Ïºó»á×Ô¶¯É¾³ý
-	ACT_ID_*:'ID'±íÊ¾identity,ÕâÐ©±í°üº¬Éí·ÝÐÅÏ¢,ÀýÈçÓÃ»§ºÍ×éµÈµÈ
-	ACT_HI_*:'HI'±íÊ¾history,ÕâÐ©±í±£´æÀúÊ·Êý¾Ý,ÀýÈçÀúÊ·Á÷³ÌÊµÀý,±äÁ¿,ÈÎÎñµÈµÈ
-	ACT_GE_*:Í¨ÓÃÊý¾Ý
+äº”.æ•°æ®åº“è¡¨å«ä¹‰
+	ACT_RE_*:'RE'è¡¨ç¤ºrepository,ç”¨äºŽå­˜å‚¨æµç¨‹å®šä¹‰å’Œæµç¨‹é™æ€èµ„æº
+	ACT_RU_*:'RU'è¡¨ç¤ºruntime,åŒ…å«äº†æµç¨‹å®žä¾‹,ä»»åŠ¡,å˜é‡,å¼‚æ­¥ä»»åŠ¡ç­‰è¿è¡Œä¸­çš„æ•°æ®è¿™äº›è¡¨çš„æ•°æ®åœ¨å®žä¾‹è¿è¡Œå®Œæ¯•åŽä¼šè‡ªåŠ¨åˆ é™¤
+	ACT_ID_*:'ID'è¡¨ç¤ºidentity,è¿™äº›è¡¨åŒ…å«èº«ä»½ä¿¡æ¯,ä¾‹å¦‚ç”¨æˆ·å’Œç»„ç­‰ç­‰
+	ACT_HI_*:'HI'è¡¨ç¤ºhistory,è¿™äº›è¡¨ä¿å­˜åŽ†å²æ•°æ®,ä¾‹å¦‚åŽ†å²æµç¨‹å®žä¾‹,å˜é‡,ä»»åŠ¡ç­‰ç­‰
+	ACT_GE_*:é€šç”¨æ•°æ®
 	
-	act_re_procdef:Á÷³Ìid,keyÐÅÏ¢
-	act_ge_bytearray:Á÷³ÌÊµ¼Ê´æ´¢µÄµØ·½
+	act_re_procdef:æµç¨‹id,keyä¿¡æ¯
+	act_ge_bytearray:æµç¨‹å®žé™…å­˜å‚¨çš„åœ°æ–¹
 	
-Áù.Á÷³ÌÒýÇæÊ¹ÓÃ²½Öè
-	»ñÈ¡Á÷³ÌÒýÇæÅäÖÃ:processEngineConfiguration-->ÅäÖÃ
-	´´½¨Á÷³ÌÒýÇæ:processEngine-->processEngineConfiguration.buildProcessEngine
-	»ñÈ¡RepositoryService:RepositoryService-->processEngine.getRepositoryService
-	²¿ÊðÁ÷³ÌÍ¼:repositoryService.createDeployment().addClasspathResource("Á÷³ÌÍ¼Â·¾¶").deploy()
-	»ñÈ¡ÔËÐÐÊ±·þÎñ:runtimeService-->processEngine.getRuntimeService
-	»ñÈ¡Á÷³ÌÊµÀý:ProcessInstance-->runtimeService
-	»ñÈ¡TaskService:TaskService-->processEngine.getTaskService
-	²éÑ¯Task:taskQuery-->taskService.createTaskQuery
+å…­.æµç¨‹å¼•æ“Žä½¿ç”¨æ­¥éª¤
+	èŽ·å–æµç¨‹å¼•æ“Žé…ç½®:processEngineConfiguration-->é…ç½®
+	åˆ›å»ºæµç¨‹å¼•æ“Ž:processEngine-->processEngineConfiguration.buildProcessEngine
+	èŽ·å–RepositoryService:RepositoryService-->processEngine.getRepositoryService
+	éƒ¨ç½²æµç¨‹å›¾:repositoryService.createDeployment().addClasspathResource("æµç¨‹å›¾è·¯å¾„").deploy()
+	èŽ·å–è¿è¡Œæ—¶æœåŠ¡:runtimeService-->processEngine.getRuntimeService
+	èŽ·å–æµç¨‹å®žä¾‹:ProcessInstance-->runtimeService
+	èŽ·å–TaskService:TaskService-->processEngine.getTaskService
+	æŸ¥è¯¢Task:taskQuery-->taskService.createTaskQuery
 
-Æß.Á÷³Ì±äÁ¿
-	ÔÚËùÓÐÁ÷³Ì±äÁ¿µÄ¶¥²¿£¬ÓÐ¼¸¸öÄ¬ÈÏµÄ¶ÔÏó¿ÉÒÔÔÚ±í´ïÊ½ÖÐÊ¹ÓÃ
-	execution£ºDelegateExecution±£´æÁËÁ÷³Ì³ÖÐøÖ´ÐÐµÄÏà¹ØÐÅÏ¢
-	task£ºDelegateTask±£´æµ±Ç°ÈÎÎñµÄÏà¹ØÐÅÏ¢
-	authenticatedUserId£ºÒÑÑéÖ¤µÄÓÃ»§id£¬Èç¹ûÃ»ÓÐÓÃ»§µÄÉí·ÝÑéÖ¤£¬±äÁ¿Ê±²»¿ÉÓÃµÄ
+ä¸ƒ.æµç¨‹å˜é‡
+	åœ¨æ‰€æœ‰æµç¨‹å˜é‡çš„é¡¶éƒ¨ï¼Œæœ‰å‡ ä¸ªé»˜è®¤çš„å¯¹è±¡å¯ä»¥åœ¨è¡¨è¾¾å¼ä¸­ä½¿ç”¨
+	executionï¼šDelegateExecutionä¿å­˜äº†æµç¨‹æŒç»­æ‰§è¡Œçš„ç›¸å…³ä¿¡æ¯
+	taskï¼šDelegateTaskä¿å­˜å½“å‰ä»»åŠ¡çš„ç›¸å…³ä¿¡æ¯
+	authenticatedUserIdï¼šå·²éªŒè¯çš„ç”¨æˆ·idï¼Œå¦‚æžœæ²¡æœ‰ç”¨æˆ·çš„èº«ä»½éªŒè¯ï¼Œå˜é‡æ—¶ä¸å¯ç”¨çš„
 	
-°Ë.ÊÂ¼þ(avtictiÖÐÊÂ¼þ·ÖÎª²¶»ñÊÂ¼þ(Catching)ºÍ´¥·¢ÊÂ¼þ(Throwing))
-	1.¶¨Ê±Æ÷ÊÂ¼þ(±êÇ©:timerEventDefinition)Ê¹ÓÃ¶¨Ê±Æ÷±ØÐë¿ªÆôjobÖ´ÐÐÆ÷
-		timeDate:Ö¸¶¨´¥·¢ÊÂ¼þµÄÊ±¼ä,ÀýÈç:2011-03-11T12:13:14(ISO 8601¸ñÊ½)
-		timeDuration:Ö¸¶¨Ö®Ç°ÒªµÈ´ý¶à³¤Ê±¼ä,ÀýÈç:P10D µÈ´ý10Ìì(ISO 8601¸ñÊ½)
-		timeCycle:Ö¸¶¨ÖØ¸´¼ä¸ô,ÀýÈçR3/PT10H(ÖØ¸´3´Î,Ã¿´Î¼ä¸ô10Ð¡Ê±,Ö§³Öcron±í´ïÊ½ºÍISO 8601)
+å…«.äº‹ä»¶(avtictiä¸­äº‹ä»¶åˆ†ä¸ºæ•èŽ·äº‹ä»¶(Catching)å’Œè§¦å‘äº‹ä»¶(Throwing))
+	1.å®šæ—¶å™¨äº‹ä»¶(æ ‡ç­¾:timerEventDefinition)ä½¿ç”¨å®šæ—¶å™¨å¿…é¡»å¼€å¯jobæ‰§è¡Œå™¨
+		timeDate:æŒ‡å®šè§¦å‘äº‹ä»¶çš„æ—¶é—´,ä¾‹å¦‚:2011-03-11T12:13:14(ISO 8601æ ¼å¼)
+		timeDuration:æŒ‡å®šä¹‹å‰è¦ç­‰å¾…å¤šé•¿æ—¶é—´,ä¾‹å¦‚:P10D ç­‰å¾…10å¤©(ISO 8601æ ¼å¼)
+		timeCycle:æŒ‡å®šé‡å¤é—´éš”,ä¾‹å¦‚R3/PT10H(é‡å¤3æ¬¡,æ¯æ¬¡é—´éš”10å°æ—¶,æ”¯æŒcronè¡¨è¾¾å¼å’ŒISO 8601)
 		
 			
