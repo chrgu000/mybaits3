@@ -1,0 +1,38 @@
+﻿192.168.1.11		root/90-=op[]
+192.168.1.10		root/-['/0p;.
+
+
+
+黄元用下面用户部署应用在192.168.1.11上：
+intern/intern_pk#123
+部署目录：
+/home/intern/app
+
+
+巡检结果会自动放到以下主机目录，每天三次，时间为：8,12,17 点的36分
+主机：10.128.109.96
+用户/密码：basezy/hbasezy
+巡检报告目录：/home/hbasezy/ogg_inspection
+巡检报告名称：OGG_XUNJIAN_+当天日期.xls
+
+
+
+VPN:https://42.99.16.138 
+	huangyuan
+	29582146@qq.com
+
+ITSM:http://10.128.86.199:7001/LoginFormITSM.jsp?flag=0
+	pk_huangy
+	29582146@qq.com
+
+堡垒机:https://10.128.95.4:4443/login.shtml
+
+	administrator/tanghc@123
+
+mvn编译口令:
+	mvn clean install -Dmaven.test.skip
+mvn导出依赖jar口令：
+	mvn dependency:copy-dependencies -DoutputDirectory=目录 -DincludeScope=模式
+	mvn dependency:copy-dependencies -DoutputDirectory=lib -DincludeScope=compile
+	
+	

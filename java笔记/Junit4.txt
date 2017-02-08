@@ -1,0 +1,8 @@
+一,注解作用
+	@Test:注明测试方法
+	@Before:注明函数前置方法
+	@After:注明函数后置方法
+	@BeforeClass:注明类前置方法
+	@AfterClass:注明类后置方法
+	
+	

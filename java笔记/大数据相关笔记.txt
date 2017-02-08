@@ -1,0 +1,83 @@
+1.hadoop的环境搭建
+	在hadoop-env.sh脚本里指定JAVA_HOME
+	在core-site.xml文件里配置文件系统的url:fs.defaultFS:hdfs://bg:9000
+	在HDFS-site.xml里配置文件块的复制数量:dfs.replication:1
+	设置ssh本机无密码登陆
+	tail -f 查看只读文件
+	
+2.配置模板
+	<configuration>
+		<property>	#
+			<name>hbase.rootdir</name>
+			<value>file:///home/testuser/hbase</value>
+		</property>
+		<property>
+			<name>hbase.zookeeper.property.dataDir</name>
+			<value>/home/testuser/zookeeper</value>
+		</property>
+	</configuration>
+
+3.常用配置项:
+	core-site.xml:
+		fs.defaultFS					hdfs://bg:9000		这里的值指的是默认的HDFS路径。当有多个HDFS集群同时工作时，用户如果不写集群名称，那么默认使用哪个哪？在这里指定！该值来自于hdfs-site.xml中的配置
+		hadoop.tmp.dir					/usr/local/tmp		这里的路径默认是NameNode、DataNode、JournalNode等存放数据的公共目录。用户也可以自己单独指定这三类节点的目录
+	hdfs-site.xml:
+		dfs.replication					1					指定数据备份几份
+		dfs.namenode.http-address		bg:50070			namenode的监听端口(提供web服务)
+		fs.namenode.name.dir			/usr/local/name		NameNode节点的数据存放目录
+		dfs.datanode.data.dir			/usr/local/data		DataNode节点的数据存放目录
+		ha.zookeeper.quorum				
+		
+		
+4.CDH版本安装
+	1.关闭防火墙
+		service iptables stop
+		chkconfig --list|grep iptables 查看iptables是否开机自启
+		chkconfig iptables off 关闭iptables的开机自启
+	2.关闭SELINUX
+		vim /etc/sysconfig/selinux		打开selinux配置文件
+		SELINUX=disabled #增加			关闭selinux
+	3.配置hosts
+	4.修改主机名
+		hostname bg	修改主机名为bg
+		vim /etc/sysconfig/network	打开包含主机名的配置文件
+	5.卸载自带的jdk
+		rpm -qa|grep jdk	查看是否安装了jdk
+		rpm -e 程序名		卸载
+	6.添加hadoop用户
+		adduser hadoop	创建hadopp用户
+		passwd	hadoop	设置hadoop密码
+		whoami 查看当前登陆的用户
+		vim /etc/sudoers	权限配置文件
+		hadoop  ALL=(root)NOPASSWD:ALL 设置hadoop用户无密码使用root权限
+	7.设置ssh无密钥登陆
+		ssh-key -t rsa 生成ssh密钥
+		ssh-copy-id 主机名	拷贝ssh公钥到指定主机
+
+5.YARN
+	hadoop各配置文件的作用
+	core-site.xml	通用属性
+	hdfs-site.xml	HDFS属性
+	mapred-site.xml	MapReduce属性
+	yarn-site.xml	Yarn属性
+	
+	安装环境:
+		Linux
+		Hadoop
+		JDK
+		OpenSSH
+		
+6.用到的命令
+	addgroup hadoop 创建hadoop用户组
+	adduser --ingroup hadoop hduser 创建hduser用户并把它加入hadoop用户组中
+	which java 查看java命令所在的路径
+	
+7.ZooKeeper
+	版本:
+		version 数据节点内容的版本号
+		cversion 当前数据节点子节点的版本号
+		aversion 当前数据节点ACL变更版本号
+	悲观锁和乐观锁:
+		悲观锁:具有强烈的排他性,在当前事务结束之前,下一个事务不能访问相同的资源
+		乐观锁:通过版本号来控制,当修改数据时验证版本号,如果数据已经修改过则抛出异常让客户端自行处理
+	

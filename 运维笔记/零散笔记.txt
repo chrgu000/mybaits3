@@ -1,0 +1,188 @@
+1.设置静态IP以及网卡自启
+	vi /etc/sysconfig/network-scripts/ifcfg-eth0
+	DEVICE=eth0
+	HWADDR=00:0C:29:1B:A1:85
+	TYPE=Ethernet
+	UUID=b5ad82a6-ac9e-4f8a-af28-109960d980f8
+	ONBOOT=yes
+	NM_CONTROLLED=yes
+	BOOTPROTO=static
+	IPADDR=192.168.237.128
+	NETMASK=255.255.255.0
+	GATEWAY=192.168.237.1
+
+2.oracle关于监听器
+	在启动、关闭或者重启oracle监听器之前确保使用lsnrctl status命令检查oracle监听器的状态：
+	1、$lsnrctl status：检查当前监听器的状态
+	2、$lsnrctl start [listener-name] 启动所有的监听器,可以指定名字来启动特定的监听器
+	3、$lsnrctl stop [listener-name]  关闭所有的监听器，可以指定名字来关闭特定的监听器
+	4、$lsnrctl reload  重启监听器，此命令可以代替lsnrctl stop,lsnrctl start
+	5、lsnrctl hep      可以显示所有可用的监听器命令
+
+3.find指令用法
+	find pathname -options [-print -exec -ok ...]
+		pathname: find命令所查找的目录路径。例如用.来表示当前目录，用/来表示系统根目录
+		-print： find命令将匹配的文件输出到标准输出
+		-exec： find命令对匹配的文件执行该参数所给出的shell命令。相应命令的形式为'command' { } \;，注意{ }和\；之间的空格
+		-ok： 和-exec的作用相同，只不过以一种更为安全的模式来执行该参数所给出的shell命令，在执行每一个命令之前，都会给出提示，让用户来确定是否执行
+	options命令选项
+		-name  文件名 例如 -name "*.ora"
+		-perm  权限	 例如 -perm +777
+		-user  用户	 
+		-group 组
+		-mtime 按照文件的更改时间来查找文件， - n表示文件更改时间距现在n天以内，+ n表示文件更改时间距现在n天以前
+	find 被查询目录 -name 表达式|xargs grep 字符串			:查找指令路径下满足指定名字并包含指令内容的文件
+
+4.oracle存储过程语法
+	一).形参的三种模式(IN,OUT,IN OUT)
+		IN:代表传入的值是只读的,不能更改
+		OUT:代表值是只写的,传入时为NULL
+		IN OUT:代表值是可读写的
+	二).创建存储过程语法,[]内的为可选
+		create [or replace procedute] 过程名称(参数名 模式 类型,参数名 模式 类型) is
+			变量名 类型 [范围] [:-值];
+			变量名 类型 [范围] [:-值];
+		begin
+			[null];	--存储过程最少有一句
+			[EXCEPTION
+				WHEN OTHERS THEN
+				]--异常处理
+		end;
+	三).编写代码块时以declare关键字定义变量
+	
+5.oracle笔记一
+	系统用户:
+		sys,system:最高权限用户,sys高于system
+		sysman:用于操作企业管理器,管理员级别
+		scott:普通用户,密码tiger
+	登陆格式:
+		用户名/密码 @[服务名|IP地址] [as sysdba|sysoper]
+	命令小计:(命令不需要分号结尾)
+		show user:不需要参数,显示当前登陆用户
+		desc [表名]:显示表结构
+		connect []用户名/密码:登陆
+	数据字典:
+		dba_users:系统用户信息
+		uesr_users:普通用信息
+		dba_tablespaces:系统表空间
+		user_tablespaces:用户表空间
+		dba_data_files:表空间文件路径
+		dbs_temp_files:临时表空间路径
+		dba_directories:oracle目录
+	例子语句:
+		alter user [用户名] account unlock:解锁用户
+		alter user [用户名] account lock:锁定用户
+		alter user [用户名] default tablespace [表空间名]:切换默认表空间
+		alter user [用户名] temporary tablespace [表空间名]:切换临时表空间
+		alter user [用户名] QUOTA UNLIMITED ON [表空间名]:让用户可以无限使用指定表空间
+		alter tablespace [表空间名] online:设置表空间为联机状态
+		alter tablespace [表空间名] offline:设置表空间为脱机状态
+		alter tablespace [表空间名] read only:设置表空间为只读状态
+		alter tablespace [表空间名] read write:设置表空间为可读写状态
+		alter tablespace [表空间名] add datafile [文件名] size [大小]:为表空间增加物理存储文件
+		alter tablespace [表空间名] drop datafile [文件名]:删除表空间物理存储文件
+		alter table [表名] add [列名] [类型]:添加列
+		alter table [表名] modify [列名] [类型]:修改列类型
+		alter table [表名] drop column [列名]:删除字段
+		alter table [表名] rename column [列名] to [新名字]:修改字段名
+		drop tablespace [表空间名]:删除表空间
+		drop table [表名]:删除表
+		drop user [用户名] cascade:删除用户以及属于该用户的类容
+		drop tablespace [表空间名] including contents and datafiles cascade constraints :删除表空间以及物理文件
+		create temporary tablespace [表空间名] tempfile [文件名] size [大小(例如:10m)]:创建临时表空间
+		create tablespace [表空间名] datafile [文件名] size [大小(例如:10m)]:创建表空间
+		create table [表名] (列名 类型,列名 类型...):创建表语法
+		rename [表名] to [新表名]:修改表名
+		truncate table [表名]:截断表,删除表中的全部数据
+		extent management local:
+	表空间:
+		永久表空间:存储数据库中要永久存储的对应
+		临时表空间:存储中间执行的过程,执行完毕释放
+		UNDO表空间:用于保存事务所修改的数据的历史数据
+	系统表空间:
+		SYSTEM:存储system的表,视图,存储过程等对象,系统表空间
+		SYSAUX:EXAMPLE的辅助表空间
+		EXAMPLE:安装oracle 11g 示例的表空间
+		UNDOTBS1:存储撤销信息
+		USERS:存储数据库用户创建的数据库对象
+		TEMP:存储sql语句处理的表和索引信息的临时表空间
+	数据类型:
+		字符型:CHAR(2000),NCAHR(1000) VARCHAR2(n) NVARCHAR2(n)
+		数值型:NUMBER(p,s),FLOAT(n)
+		日期型:DATE,TIMESTAMP
+		大对象:BLOB(4G,2进制),CLOB(4g,字符串)
+6.PL/SQL
+	= :判断
+	:= :赋值
+	set serveroutput on :打开输出开关
+	accept [地址值] prompt [提示信息] :从键盘获取一个输入
+	[变量名] := &[地址值]:地址值的使用
+	引用型变量
+		[变量名] [表名].[字段名]%type :引用型变量定义
+	记录型变量
+		[变量名] [表名]%rowtype :记录型变量定义
+	IF语法:
+		IF [表达式] THEN 
+		[语句块] 
+		ELSIF [条件] THEN 
+		[语句块] 
+		ElSE [语句块] 
+		END IF;
+	WHILE语法:
+		WHILE [表达式] LOOP
+		[语句块]
+		END LOOP;
+	LOOP语法:
+		LOOP
+			EXIT WHEN [条件]
+			[语句块]
+		END LOOP;
+	FOR语法:
+		FOR [变量名] IN [连续区间] LOOP
+			[语句块]
+		END LOOP;
+	光标的语法:
+		CURSOR [光标名] IS [SELECT语句] :不带参数的光标定义
+		
+		open [光标名]:打开光标
+		close [光标名]:关闭光标
+		fetch [光标名] into [变量名]:在光标中取一行到变量中
+		[光标名]%notfound :如果光标没有取到值返回真
+		[光标名]%found :如果光标取到值返回真
+
+7.Linux后台执行
+	nohup [命令] &:后台执行指令
+	[命令] 1>[文件名]:将标准输出输出到文件
+	[命令] 2>[文件名]:将错误输出输出到文件
+	[命令] 1>[文件名] 2>&1:将错误输出输出到标准输出中并将标准输出输出到文件
+	nohup imp hc_zychk/hc_zychk@192.168.1.130/hc file=/root/huangyuan/zychk.dmp full=y ignore=y statistics=none >shuchu.txt 2>&1 &
+		
+8.导出
+	oracle数据库，数据泵使用简述：
+	1：创建directory
+	create or replace directory [名称] as '[路径字符串]';
+	2:授权用户可以读写这个directory
+	grant read,write on directory dmpdir to 用户;
+	3:导出用户
+	expdp username/password directory=DUMPDIR dumpfile=**.dmp logfile=**.log
+	4：导入用户
+	impdp username/password directory=dump dumpfile=**.dmp remap_schema=源用户:目标用户 
+	remap_tablespace=源表空间名字1:目标表空间,源表空间名字2:目标表空间 logfile=**.log
+	
+9.中断用户连接
+	select sid,serial# from v$session where username='HC_IMCHK';
+	alter system kill session 'sid,serial';
+
+10.创建表空间
+	create tablespace test_data?(表空间名)
+	logging?
+	datafile '/data/oracle/oradata/test/test_data01.dbf' --//Linux下的文件系统?
+	size 64m?
+	autoextend on?
+	next 65m maxsize 2048m?
+	extent management local;?
+	
+	
+	
+
+	

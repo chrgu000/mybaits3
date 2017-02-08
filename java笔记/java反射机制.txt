@@ -1,0 +1,18 @@
+一.常用类型
+	java.lang.Class	:类型
+	java.lang.reflect.Constructor:构造函数
+	java.lang.reflect.Field:字段
+	java.lang.reflect.Method:方法
+	java.lang.reflect.Modifier:修饰符
+	
+二.常用方法
+	getDeclaredMethods:获取所有方法
+	getReturnType:获取方法的返回类型
+	getParameterTypes:获取方法的传入参数类型
+	getDeclaredMethod:获取指定方法
+	getDeclaredConstructors:获取所有的构造方法
+	getDeclaredConstructor:获取指定的构造方法
+	getSuperclass:获取父类
+	getInterfaces:获取实现的接口
+
+	
