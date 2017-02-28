@@ -20,6 +20,8 @@
 	Resource:J2ee提供的注解,默认按照名称装配:@Resource(name="beanName")
 	Autowired:Spring提供的注解,默认按照类型装配
 	
+	InitBinder	方法级别注解,用于定义参数解析器,方法接受一个WebDataBinder参数
+	
 二:笔记
 	mvc:annotation-driven:该标签是以一简洁的形式注册了DefaultAnnotationHandlerMapping和AnnotationMethodHandlerAdapter两个bean,是为Contrillers分发请求所必须的,并且提供了数据绑定支持以及NumberFormatannotation,DateTimeFormat,Valid等注解的支持
 	mvc:interceptors:是一种简写形式,可以配置多个HandlerMapping,该标签会为每一个HandlerMapping注入一个拦截器
@@ -60,6 +62,7 @@ GenericTypeResolver:泛型相关工具类
 		@Transactional 开启事务
 		
 		@SpringBootApplication启动类=@Configuration+@EnableAutoConfiguration+@ComponentScan
+			exclude	排除自动化配置的类
 		@ImportResource当必须要使用xml文件时可以使用此注解
 		@ServletComponentScan 在SpringBootApplication上使用,开启@WebServlet,@WebFilter,@WebListener注解 
 	
@@ -113,5 +116,10 @@ GenericTypeResolver:泛型相关工具类
 	1.需要配置过滤器:DelegatingFilterProxy
 	
 	
-	
+七.springMVC
+	PropertyEditorSuport	自定义参数解析器 可扩展 局部使用webdatabinder	配合InitBinder	方法级别注解,用于定义参数解析器,方法接受一个WebDataBinder参数使用
+	Formatter				格式化参数       可扩展	全局/局部	source=String
+	Converter				转换器			 不可扩展 全局/局部  source=自定义
+	FormattingConversionServiceFactoryBean Formatter合Converter 需要在该类的bean实例注册
+	<mvc:annotation-driven conversion-service="FormattingConversionServiceFactoryBean的实例" />
 	

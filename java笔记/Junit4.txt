@@ -1,8 +1,26 @@
-﻿一,注解作用
+﻿
+ignore	忽视
+assert	断言
+一,注解
 	@Test:注明测试方法
+		expected	抛出异常 class
+		timeout		运行时间限定(毫秒)
 	@Before:注明函数前置方法
 	@After:注明函数后置方法
-	@BeforeClass:注明类前置方法
-	@AfterClass:注明类后置方法
+	@BeforeClass:在所有的方法运行前被执行,static
+	@AfterClass:在所有的方法运行后被执行,static
+	@Ignore 忽略@Test的方法
+	@RunWhith	更改测试运行器 运行器继承org.junit.runner.Runner
+	@Suite.SuiteClassed 指定测试类
 	
+二.测试套件
+	写一个测试套件的入口类,并且不包含任何其他方法
+	更改运行器为Suite.class
+	将测试类作为数组传入Suite.SuiteClassed
+	
+三.参数化测试
+	更改测试运行器为ParameterTest.class
+	声明变量来存放预期值和结果值
+	声明一个返回值为Collection的公共静态方法,并使用@ParameterTest修饰
+	申明一个带有参数的公共构造函数,并且赋值
 	

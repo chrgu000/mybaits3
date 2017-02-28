@@ -53,7 +53,8 @@ src							根路径
 	
 	archetype:generate	创建项目骨架
 	archetype:generate -DgroupId=${包名} -DartifactId=${模块名} -Dversion${版本} -Dpackage=${包名} 快速创建项目骨架
-
+	dependency:tree 	打印当前项目的依赖树
+	
 5.setting.xml标签
 	localRepository  本地仓库路径
 	mirror	镜像仓库

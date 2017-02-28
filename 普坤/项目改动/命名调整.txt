@@ -1,0 +1,17 @@
+命名规范修改:
+	1.OGG巡检同步
+		路径更改为./oggReportSync.action
+		update tm_coolaction set parameter='actionType:openUrl;url:./oggReportSync.action' where id=10059;
+		
+	2.远程下载
+		路径改为./fileTransfer.action
+		update tm_coolaction set parameter='actionType:openUrl;url:./fileTransfer.action' where id=10060;
+		
+	3.版本工具
+		路径改为./tableRowsTotal.action
+		
+
+		
+1.EXCEL文件对比
+2.数据库内数据表对比
+3.数据库表数量统计
