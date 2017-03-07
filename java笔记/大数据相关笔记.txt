@@ -1,4 +1,4 @@
-﻿1.hadoop的环境搭建
+1.hadoop的环境搭建
 	在hadoop-env.sh脚本里指定JAVA_HOME
 	在core-site.xml文件里配置文件系统的url:fs.defaultFS:hdfs://bg:9000
 	在HDFS-site.xml里配置文件块的复制数量:dfs.replication:1
@@ -80,4 +80,21 @@
 	悲观锁和乐观锁:
 		悲观锁:具有强烈的排他性,在当前事务结束之前,下一个事务不能访问相同的资源
 		乐观锁:通过版本号来控制,当修改数据时验证版本号,如果数据已经修改过则抛出异常让客户端自行处理
+	
+8.hbase过滤器
+	SingleColumnValueFilter  列值过滤器 SingleColumnValueFilter("列簇","列名",CompareOp(比较方法,大于小于等,枚举值),"值") 
+	RowFilter             ROWKEY过滤器 支持正则表达式过滤器	RowFilter(CompareOp(比较方法,大于小于等,枚举值),ByteArrayComparable(该类的子类,支持正则表达式等))
+	ValueFilter			值过滤器不需要指定列	ValueFilter(CompareOp(比较方法,大于小于等,枚举值),ByteArrayComparable(该类的子类,支持正则表达式等))
+	QualifierFilter		列名过滤器	QualifierFilter(CompareOp(比较方法,大于小于等,枚举值),ByteArrayComparable(该类的子类,支持正则表达式等))
+	PrefixFilter		前缀过滤器	前缀过滤器将会过滤掉不匹配的记录，过滤的对象是主键的值.
+	PageFilter			页过滤器		页过滤器可以根据主键有序返回固定数量的记录,这需要客户端在遍历的时候记住页开始的地方,配合scan的startkey一起使用.
+	KeyOnlyFilter		键过滤器		键过滤器可以简单的设置过滤的结果集中只包含键而忽略值,这里有一个选项可以把结果集的值保存为值的长度.
+	FirstKeyOnlyFilter	键过滤器		在键过滤器的基础上,根据列有序,只包含第一个满足的键.
+	ColumnPrefixFilter	列值过滤器	这里过滤的对象是列的值.
+	TimestampsFilter	版本过滤器	这里参数是一个集合,只有包含在集合中的版本才会包含在结果集中.
+	SkipFilter			包装过滤器	此类过滤器要通过包装其他的过滤器才有意义,是其他过滤器的一种加强.
+	FilterList			过滤器集合	FilterList(FilterList.Operator(枚举值,说明结果集的AND和OR的关系)).
+	Counter				计数器		
+9.Hbase相关笔记
+	hbase是三维有序的,主键有序,列有序,版本有序
 	
