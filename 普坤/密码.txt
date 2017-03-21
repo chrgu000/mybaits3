@@ -1,4 +1,4 @@
-﻿192.168.1.11		root/90-=op[]
+192.168.1.11		root/90-=op[]
 192.168.1.10		root/-['/0p;.
 
 
@@ -31,11 +31,20 @@ ITSM:http://10.128.86.199:7001/LoginFormITSM.jsp?flag=0
 
 mvn编译口令:
 	mvn clean install -Dmaven.test.skip
-<<<<<<< HEAD
+
 mvn导出依赖jar口令：
 	mvn dependency:copy-dependencies -DoutputDirectory=目录 -DincludeScope=模式
 	mvn dependency:copy-dependencies -DoutputDirectory=lib -DincludeScope=compile
-=======
->>>>>>> refs/remotes/origin/master
+
+
+跳转机（96机器）：    
+ ip:10.128.109.96 port 5151                用户/密码：hbasezy/hasezy
+ yarn/yarn123
+/opt/tomcat/下
+ 
+数据库:imchk_100/Im_chk#100		jdbc:oracle:thin:@//10.128.82.4:3436/rmchkpr
+登陆:admin/Admindgp_123pk
+
+
 	
 	
