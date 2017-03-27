@@ -1,1 +1,12 @@
-﻿REGEXP_REPLACE(INITCAP('AAA'||code), '(\w)[_]', '\1')	转换驼峰命名法
+REGEXP_REPLACE(INITCAP('AAA'||code), '(\w)[_]', '\1')	转换驼峰命名法
+--字符串分割
+SQL>select regexp_substr('/孟硕/保红燕/小二黑/花无缺','[^/]+',1,3) res from dual;
+       即可得到'小二黑'。
+      上面的参数1:'/孟硕/保红燕/小二黑/花无缺'为待分割的目标字符串；
+      上面的参数2:'[^/]+'表示除去'/'字符的剩余的多个字符，'^'表示否的意思，+表示一到多个字符；
+      上面的参数3:1表示从目标字符串的第一个字符开始；
+      上面的参数4:3表示分割后得到的第三个子字符串。
+ --SQL查询中的IF判断
+ select status,decode(status,'SENDFAILED','是','否') from c_system_runner_log;
+ decode(a,b,c,d)
+ 如果a=b返回c否则返回d

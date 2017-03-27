@@ -28,8 +28,11 @@ create sequence seq_c_rowkey_code
 increment by 1
 start with 1
 maxvalue 99999999999999999;
-
-
+--  添加映射关系上传
+insert into tm_coolaction (ID, NAME, CODE, VERSION, HANDLER, PARAMETER)
+values (104, '上传映射关系', 'rowkeyMappingCodeUpload', 1, null, 'actionType:rowkeyMappingCodeUpload');
+insert into tm_coolbutton (ID, NAME, CODE, VERSION, ACTION_ID, SEPARATOR, ICON, TOOLBAR_ID, VISIBLE, ENABLE, ORDINAL, PARAMETER, TOOLTIP)
+values (104, '上传映射关系', 'rowkeyMappingCodeUpload', 1, 104, null, 'assets/images/queryView.png', 25, 1, 1, 7, null, null);
 
 --添加规格查询页面
 insert into tm_gridpage (ID, NAME, CODE, MEMO, VERSION, CREATEDATE, CREATOR, UPDATEDATE, UPDATER, CRITERIATEMPLATE_ID, CRITERIASTATEMENT_ID, RESULTTEMPLATE_ID, COOLBAR_ID, EXPORTCRITERIASTATEMENT_ID, STATISTICS, ASYNCHRONOUS, OTHERDATASOURCE, AUTOQUERY)
@@ -76,6 +79,21 @@ values (5020, '备注', 'NOTES', null, 1, sysdate, 'default', sysdate, 'default'
 
 
 
+-- 更改菜单位置
+-- 抓取系统日志
+select * from tm_explorer where id = 1245;
+select * from tm_gridpage where id = 605;
+select * from tm_criteriastatement where id = 584;
+select * from tm_entitytemplate where id = 589;
+select * from tm_entitytemplate where id = 590;
+
+
+-- 抓取系统详表
+select * from tm_explorer where id = 1241;
+select * from tm_gridpage where id = 601;
+select * from tm_entitytemplate where id in(581,582);
+select * from tm_criteriastatement where id = 583;
+select * from tm_attributetemplate where id between 5799 and 5802;
 
 --
 --
@@ -127,10 +145,63 @@ create sequence SEQ_C_SYSTEM_RUNNER_DETAIL
 increment by 1
 start with 1
 maxvalue 999999999
---  添加映射关系上传
-insert into tm_coolaction (ID, NAME, CODE, VERSION, HANDLER, PARAMETER)
-values (104, '上传映射关系', 'rowkeyMappingCodeUpload', 1, null, 'actionType:rowkeyMappingCodeUpload');
-insert into tm_coolbutton (ID, NAME, CODE, VERSION, ACTION_ID, SEPARATOR, ICON, TOOLBAR_ID, VISIBLE, ENABLE, ORDINAL, PARAMETER, TOOLTIP)
-values (104, '上传映射关系', 'rowkeyMappingCodeUpload', 1, 104, null, 'assets/images/queryView.png', 25, 1, 1, 7, null, null);
+
+
+DECLARE
+  NAMES    VARCHAR(2000) := '会话ID,系统名,所属域,请求时间,状态,请求内容';
+  CODES    VARCHAR(2000) := 'MSGID,RUNNERNAME,DOMAINNAME,REQYE,STATUS,REQUEST';
+  TYPES    VARCHAR(2000) := '11,11,11,51,11,11';
+  ENDINDEX NUMBER := 6;
+  STRINDEX NUMBER := 1;
+  NAME     VARCHAR(255);
+  CODE     VARCHAR(255);
+  CTYPE    VARCHAR(255);
+  NAMEID   NUMBER;
+  ENID     NUMBER := 590;
+  GRID     NUMBER := 605;
+  CREATOR  VARCHAR(255) := 'DEFAULT';
+BEGIN
+  LOOP
+    SELECT REGEXP_SUBSTR(NAMES, '[^,]+', 1, STRINDEX) INTO NAME FROM DUAL;
+    SELECT REGEXP_SUBSTR(CODES, '[^,]+', 1, STRINDEX) INTO CODE FROM DUAL;
+    SELECT REGEXP_SUBSTR(TYPES, '[^,]+', 1, STRINDEX) INTO CTYPE FROM DUAL;
+    NAMEID := SEQ_TM_ATTRIBUTETEMPLATE.NEXTVAL;
+    INSERT INTO TM_ATTRIBUTETEMPLATE
+      (ID,
+       NAME,
+       CODE,
+       VRESION,
+       CREATEDATE,
+       CREATOR,
+       UPDATEDATE,
+       UPDATER,
+       ENTITYTEMPLATE_ID,
+       ORDINAL,
+       DATATYPE,
+       VISIBLE,
+       GRIDPAGE_ID)
+    VALUES
+      (NAMEID,
+       NAME,
+       CODE,
+       1,
+       SYSDATE,
+       CREATOR,
+       SYSDATE,
+       CREATOR,
+       ENID,
+       STRINDEX,
+       TO_NUMBER(CTYPE),
+       1,
+       GRID);
+    DBMS_OUTPUT.PUT_LINE('SELECT * FROM TM_ATTRIBUTETEMPLATE WHERE ID = ' ||
+                         NAMEID || ';');
+    STRINDEX := STRINDEX + 1;
+    EXIT WHEN STRINDEX > ENDINDEX;
+  END LOOP;
+END;
+
+
+
 
 
