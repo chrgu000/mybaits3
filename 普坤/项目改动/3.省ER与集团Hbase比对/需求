@@ -1,0 +1,20 @@
+
+2.1.省ER与集团hbase数据比对
+省ER业务单、业务单项、操作一天的rowkey与集团HBASE的rowkey数量进行比对（省多余集团的rowkey详单）(ID\ROWKEY)
+	Er: EM_ORDER=>EM_ORDER_HISTORY_**
+	   稽核平台的详情表：
+	   统计时间（ER的创建时间CREATEDATE是0~24点），每天1点统计前一天的
+	统计表：domain，month，day，不一致 ，score（传统模式）
+	   详情表：domain，gid,rowkey，message
+   	备注，增加统计表计算分数
+   	
+2.2.省ER与集团hbase对象属性比对
+	省ER的字段有值是否在HBASE中存在； 安排黄元做下，等安徽的装维环境连通后
+	   只判断（主表的属性和值是否在hbase里存在）
+	   定单：EM_ORDER(ID,ROWKEY,CODE,NAME ,SPEC_ID.****),根据规格（），
+	统计时间（ER的创建时间CREATEDATE是0~24点），每天1点统计前一天的
+	统计表：domain，day，总数，不合规 ，score
+	详情表：domain，gid,rowkey，message
+	
+	
+	备注，增加统计表计算分数

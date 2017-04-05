@@ -95,6 +95,11 @@ select * from tm_entitytemplate where id in(581,582);
 select * from tm_criteriastatement where id = 583;
 select * from tm_attributetemplate where id between 5799 and 5802;
 
+-- 页面抓取数据导出
+insert into tm_coolbar values(31,'抓取配置详情','SystemRunnerDetail',1,1);
+insert into tm_coolbutton values(105,'抓取数据导出','exportSystemRunnerDetail',1,null,null,'assets/icon/export.16.png',31,1,1,1,null,null);
+insert into tm_coolaction values(105,'抓取数据导出','exportSystemRunnerDetail',1,null,'actionType:openUrl;url:./fileDownloadAction!exportSystemRunnetDetail.action')
+
 --
 --
 --	imchk_100 数据库升级
