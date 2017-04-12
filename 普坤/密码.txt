@@ -45,6 +45,8 @@ mvn导出依赖jar口令：
 数据库:imchk_100/Im_chk#100		jdbc:oracle:thin:@//10.128.82.4:3436/rmchkpr
 登陆:admin/Admindgp_123pk
 
+用户名：ITSP_QUERY
+密码:Query#123456
 
 	
 	

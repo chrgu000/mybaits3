@@ -4,3 +4,20 @@
 --4.关系属性要配置只有一条和最少一条
 5.要定时轮询
 --6.正向与反向的比对需求(标识要只能定义一个,oracle创建映射表(页面标识,ROWKEY,场景标识))
+
+
+TB_PAGE_DIFFERENCES_DETAILL 这个也增加一个指标id，
+order：DGP_PAGE_ORDER_DTL ，DGP_PAGE_ORDER_TOTAL
+orderitem：DGP_PAGE_ORDERITEM_DTL ，DGP_PAGE_ORDERITEM_TOTAL
+operation：DGP_PAGE_OPERATION_DTL ，DGP_PAGE_OPERATION_TOTAL
+
+上行:
+每隔一端时间根据配置时间段和条件进行抓取
+只比对抓取到的内容
+
+下行:
+每隔一段时间从数据库随机搜索一百条(可配置)数据
+只要ER里面有值页面就必须抓取到值
+
+比对:
+每天要比对两次,输出比对的时间
