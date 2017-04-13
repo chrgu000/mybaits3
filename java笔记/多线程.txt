@@ -29,7 +29,16 @@ volitae	不稳定的
 	4.JDK提供的api
 		ReentrantLock
 		AtomicInterger
-
+	5.可返回的多线程接口	java.util.concurrent.Callable
+		Callable的可执行方法为call,可以有返回值,可以抛出异常
+		运行callable可以拿到一个java.util.concurrent.Future对象
+		Future方法:
+			isCancelled 如果任务在完成之前被取消返回true
+			isDone	如果任务已完成返回true
+	6.Spring线程池
+				
+	
+	
 二.文件操作
 	编码:
 		GBK 中文占用两个字节,英文占用一个字节

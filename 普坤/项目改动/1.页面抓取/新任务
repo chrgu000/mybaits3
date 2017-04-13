@@ -23,4 +23,7 @@ operation：DGP_PAGE_OPERATION_DTL ，DGP_PAGE_OPERATION_TOTAL
 每天要比对两次,输出比对的时间
 
 
-sasa
+--
+	1.界面化配置
+	2.图片对应订单
+

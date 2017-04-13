@@ -60,3 +60,7 @@ SELECT *
          WHERE T1.DOMAIN_ID = T2.ID
            AND T1.SPEC_ID = T3.ID)
  WHERE 1 = 1
+ 
+ 
+ 
+ 

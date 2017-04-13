@@ -1,0 +1,27 @@
+1.Groovy中的方法可以省略括号,构造方法除外
+2.Groovy中字符串可以使用单引号或者双引号包围,用双引号包围的方法可以支持EL表达式
+3.用三个双引号包围的字符串类似于字符串的加法
+4.Groovy中的集合可以通过以下方法简单的添加以及移除值
+	def list = []
+	list << 1
+	list = list + 1
+	list = list - 1
+	list += 3
+	list -= 3
+5.Groovy中的默认修饰符是public
+6.Groovy中默认需要有两个构造方法,一个无参构造方法,一个map构造方法
+7.Groovy中的list和map的参数形式以及使用
+	def list = [1,2,3,4]
+	list[0] 第一个数
+	lsit[-1] 倒数第一个数
+	def map = ["name":"sas","age":14]
+	map.name name属性
+	map+=["sex":"女"]
+	map["sex"]
+8.闭包
+	def aa = {name,age=3 ->
+		print "姓名:${name} 年龄:${age}"		
+	}
+	map.echo({key,val - > print("${key} : ${val}"})
+9.非空判断
+	print(a?:2) 如果a不为空就输出a的类型否则输出2
