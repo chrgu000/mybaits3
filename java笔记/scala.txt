@@ -1,0 +1,6 @@
+1.scala的private相比于java更加严格,外层类不能访问内层类的私有成员
+2.scala的Protected只能被该类和他的子类访问
+3.访问控制允许特殊控制,如private[Test2] class Test 标识Test对Test2public对其他类全部Private
+4.scala函数调用分为传名调用和传值调用,在函数声明时 def myMethod(t: => Long)代表传名调用,传名调用在传值时不计算表达式的值,每次使用时计算一次
+5.遍历语法for( arg <- args )
+6.函数支持默认的参数值
