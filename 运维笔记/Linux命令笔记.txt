@@ -1,4 +1,4 @@
-﻿1.iptables命令
+1.iptables命令
 	命令调用方式:iptables -t 表名 <-A/I/D/R> 规则链名 [规则号] <-i/o> 网卡名 -p 协议名 <-s 源IP/源子网> --sport 源端口 <-d 目标IP.目标子网> --dport 目标端口 -j 动作
 	选项:
 		-t 指定要操作的表
@@ -71,6 +71,18 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/sda3        57G   23G   32G  43% /
 tmpfs           947M  224K  947M   1% /dev/shm
 /dev/sda1       194M   32M  153M  18% /boot
+
+
+nohup 开启守护进程确保在后台执行
+w命令查询用户登录信息
+ 17:53:04 up 84 days,  6:23,  2 users,  load average: 0.01, 0.03, 0.00
+USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU WHAT
+sparkoss pts/0    10.128.250.41    17:52   10.00s  0.01s  0.01s -bash
+sparkoss pts/1    10.128.250.41    16:57    0.00s 23.61s  0.01s w
+
+如pts/1是当前绘画的主程序
+ ps -ef|grep pts/1
+查看进程为bash的就是当前会话的根进程
 
 
 

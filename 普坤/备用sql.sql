@@ -183,3 +183,38 @@ SELECT *
            AND B.INSTANCE_NUMBER = A.INSTANCE_NUMBER)
  WHERE TRUNC(BEGIN_TIME) > TRUNC(SYSDATE)-1
  ORDER BY BEGIN_TIME desc;
+
+ 
+ --kill 会话用
+ select l.session_id,o.owner,o.object_name,c.serial#
+from v$locked_object l,dba_objects o,v$session c
+where l.object_id=o.object_id and l.session_id = c.sid;
+alter system kill session '53,663';
+
+--查询正在运行中的sql语句
+SELECT b.sid      oracleID,
+       b.username 登录Oracle用户名,
+       b.serial#,
+       spid       操作系统ID,
+       paddr,
+       sql_text   正在执行的SQL,
+       b.machine  计算机名
+  FROM v$process a, v$session b, v$sqlarea c
+ WHERE a.addr = b.paddr
+   AND b.sql_hash_value = c.hash_value
+   and b.username = 'ITSP_QUERY';
+   
+   
+--解决对象锁定   
+SELECT /*+ rule */ s.username,
+decode(l.type,'TM','TABLE LOCK',
+'TX','ROW LOCK',
+NULL) LOCK_LEVEL,
+o.owner,o.object_name,o.object_type,
+s.sid,s.serial#,s.terminal,s.machine,s.program,s.osuser
+FROM v$session s,v$lock l,dba_objects o
+WHERE l.sid = s.sid
+AND l.id1 = o.object_id(+)
+AND s.username is NOT Null;
+
+alter system kill session'56,46969';

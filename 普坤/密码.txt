@@ -7,7 +7,8 @@
 intern/intern_pk#123
 部署目录：
 /home/intern/app
-
+192.168.1.10
+hadoop/Hadoop_pk123
 
 巡检结果会自动放到以下主机目录，每天三次，时间为：8,12,17 点的36分
 主机：10.128.109.96
@@ -15,6 +16,8 @@ intern/intern_pk#123
 巡检报告目录：/home/hbasezy/ogg_inspection
 巡检报告名称：OGG_XUNJIAN_+当天日期.xls
 
+机器：10.128.75.4:5151 
+用户：osschk/osschk123
 
 
 VPN:https://42.99.16.138 

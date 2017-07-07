@@ -98,3 +98,12 @@
 9.Hbase相关笔记
 	hbase是三维有序的,主键有序,列有序,版本有序
 	
+	
+10.Hbase shell
+
+11.spark
+	spark-submit提交时的选项
+	--total-executor-cores:总共用多少个线程执行
+	--class:指定启动类
+	--master:指定master节点 
+	
