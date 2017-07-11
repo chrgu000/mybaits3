@@ -6,3 +6,39 @@
 	mesos://HOST:PORT 连接到指定的 Mesos 集群，需要指定端口。
 	yarn-client客户端模式 连接到 YARN 集群。需要配置 HADOOP_CONF_DIR。
 	yarn-cluster集群模式 连接到 YARN 集群。需要配置 HADOOP_CONF_DIR。
+
+2.spark简介
+	每一个host上可以运行对个worker,每一个worker可以运行多个executor,task会被分配到executor上运行,stage指的是一组并行运行的task,stage内部不能shuffle.
+	CPU的core数量,每个executor可以占用一个或者多个core
+	partition指的是数据分片的数量,每一个task只能处理一个partition的数据,parallelism指的是RDD在recude时默认返回数据的partition数量
+
+	
+	
+3.spark应用配置相关
+	(一).动态资源分配
+		参数名															默认值			说明
+		spark.dynamicAllocation.executorIdleTimeout						60s				executor最大空闲时间,超过则被移除(除非有缓存),默认60s
+		spark.dynamicAllocation.cachedExecutorIdleTimeout				infinity		缓存了数据的executor默认不会被移除
+		spark.dynamicAllocation.maxExecutors							infinity		最多使用的executor数，默认为你申请的最大executor数
+		spark.dynamicAllocation.minExecutors							0				最少保留的executor数
+		spark.dynamicAllocation.schedulerBacklogTimeout					1s				有task等待运行时间超过该值后开始启动executor	
+		spark.dynamicAllocation.initialExecutors						(minExecutors)	如果所有的executor都移除了，重新请求时启动的初始executor数
+	(二).系统变量
+		spark.master								指定master
+		spark.rest.submissions.create				指定rest方式提交的url		(${url}/v1/submissions/create)
+		clientSparkVersion							指定spark的版本号
+	(三).应用变量
+		spark.eventLog.enabled						日志输出开关
+		spark.eventLog.dir							指定日志的保存地址
+		spark.executor.memory						每个executor使用的内存量.默认1g
+		spark.default.parallelism					指定默认的分片数	
+		spark.serializer
+		spark.driver.cores							驱动程序所占用的核心数,默认为1
+		spark.driver.maxResultSize					驱动程序所接收结果占用的最大内存,默认1g,最小1m,为0时则表示无限,当驱动内存溢出时程序结束
+		spark.extraListeners						spark监听器,再sparkcontext初始化时创建,构造函数可以有一个或者没有,当有一个时,则接受一个sparkconf
+	(四).运行时变量
+		spark.driver.extraClassPath					驱动程序启动时的额外classpath,在客户端模式下可以使用环境变量来指定或者在启动参数中指定
+		spark.driver.extraJavaOptions				驱动程序的额外参数
+		spark.jars.packages							可以直接指定依赖maven坐标,多个依赖库直接使用逗号分隔,格式为groupId:artifactId:version,如果要附加仓库可以使用--repositories
+		spark.jars.ivy								逗号分隔的方式指定远程仓库的地址
+							
