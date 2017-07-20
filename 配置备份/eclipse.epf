@@ -1,0 +1,39 @@
+#Thu Jul 20 11:58:57 GMT+08:00 2017
+\!/=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.argumentPrefixes=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.argumentSuffixes=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.fieldPrefixes=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.fieldSuffixes=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.localPrefixes=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.localSuffixes=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.staticFieldPrefixes=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.staticFieldSuffixes=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.staticFinalFieldPrefixes=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.staticFinalFieldSuffixes=
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.compliance=1.7
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.deprecation=ignore
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.rawTypeReference=ignore
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.uncheckedTypeOperation=ignore
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.unusedImport=ignore
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.unusedPrivateMember=ignore
+/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.source=1.7
+/instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.PREF_DEFAULT_ENVIRONMENTS_XML=
+/instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1500282422278">\r\n<vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n<vm id\="1500280711031" name\="jdk1.8.0_121" path\="C\:\\Program Files\\Java\\jdk1.8.0_121"/>\r\n<vm id\="1500282422278" name\="jdk1.7.0_79" path\="D\:\\app\\jdk\\jdk1.7.0_79"/>\r\n</vmType>\r\n</vmSettings>\r\n
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.exception.name=e
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.formatterprofiles.version=12
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.gettersetter.use.is=true
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.overrideannotation=true
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+/instance/org.tigris.subversion.subclipse.core/repositories/svn%%%116.228.88.150%repository%trunk%codebase%code%branches%1.0%platform-java/location=svn\://116.228.88.150/repository/trunk/codebase/code/branches/1.0/platform-java
+/instance/org.tigris.subversion.subclipse.core/repositories/svn%%%116.228.88.150%repository%trunk%dgp%code%trunk%workspace-java%2.0%platform-java/location=svn\://116.228.88.150/repository/trunk/dgp/code/trunk/workspace-java/2.0/platform-java
+/instance/org.tigris.subversion.subclipse.core/repositories/svn%%%116.228.88.150%repository%trunk%dianqu/location=svn\://116.228.88.150/repository/trunk/dianqu
+@org.eclipse.jdt.core=3.12.0.v20160516-2131
+@org.eclipse.jdt.launching=3.8.100.v20160505-0636
+@org.eclipse.jdt.ui=3.12.0.v20160525-1829
+@org.tigris.subversion.subclipse.core=1.10.12
+file_export_version=3.0
