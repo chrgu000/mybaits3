@@ -52,12 +52,12 @@ mvn导出依赖jar口令：
 用户名：ITSP_QUERY
 密码:Query#123456
 
-
+10.128.109.9
+hbase10/shdx10
 [hbase10@shdx009 ~]$ cd /opt/cloudera/parcels/CDH-5.5.1-1.cdh5.5.1.p0.11/lib/hbase
 [hbase10@shdx009 hbase]$ sudo -u hbase ./bin/hbase shell
 
-10.128.109.9
-hbase10/shdx10
+
 
 代码SVN路径
 (1.DGP)

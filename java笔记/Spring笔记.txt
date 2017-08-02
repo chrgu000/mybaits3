@@ -46,7 +46,7 @@ GenericTypeResolver:泛型相关工具类
 	注解:
 		@Value	配置文件的注入
 		@Component
-		@ConfigurationProperties
+		@ConfigurationProperties 配置文件自动注入
 		@Controller 处理Http请求
 		@RestController Spring4新增注解,等同于@Controller+@ResponseBody
 		@RequestMapping 配置url映射
@@ -123,3 +123,5 @@ GenericTypeResolver:泛型相关工具类
 	FormattingConversionServiceFactoryBean Formatter合Converter 需要在该类的bean实例注册
 	<mvc:annotation-driven conversion-service="FormattingConversionServiceFactoryBean的实例" />
 	
+八.使用springloaded实现热部署
+	set JAVA_OPTS=-javaagent:springloaded-1.2.5.RELEASE.jar -noverify
