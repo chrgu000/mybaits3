@@ -1,0 +1,12 @@
+一.常用命令
+    run     将镜像放入容器中,然后启动容器
+    start   重新启动一个已经存在的容器
+    stop    停止一个启动的容器
+    rename  重命名一个已经存在的容器
+    ps      查看容器
+    inspect 查看容器信息
+
+
+二.netwoek 网络管理部分
+    docker network create       创建网卡
+    docker network inspect      查看网络内部信息

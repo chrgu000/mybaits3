@@ -218,3 +218,15 @@ AND l.id1 = o.object_id(+)
 AND s.username is NOT Null;
 
 alter system kill session'56,46969';
+
+-- 查看正在运行的sql语句
+SELECT b.sid oracleID,  
+       b.username 登录Oracle用户名,  
+       b.serial#,  
+       spid 操作系统ID,  
+       paddr,  
+       sql_text 正在执行的SQL,  
+       b.machine 计算机名  
+FROM v$process a, v$session b, v$sqlarea c  
+WHERE a.addr = b.paddr  
+   AND b.sql_hash_value = c.hash_value 

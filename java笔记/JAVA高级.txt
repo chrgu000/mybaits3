@@ -50,6 +50,46 @@ volitae	不稳定的
 		构造参数:文件 操作(rw) 
 
 三.反射
+	1.常用类型
+    	java.lang.Class	:类型
+    	java.lang.reflect.Constructor:构造函数
+    	java.lang.reflect.Field:字段
+    	java.lang.reflect.Method:方法
+    	java.lang.reflect.Modifier:修饰符
+
+    2.常用方法
+    	getDeclaredMethods:获取所有方法
+    	getReturnType:获取方法的返回类型
+    	getParameterTypes:获取方法的传入参数类型
+    	getDeclaredMethod:获取指定方法
+    	getDeclaredConstructors:获取所有的构造方法
+    	getDeclaredConstructor:获取指定的构造方法
+    	getSuperclass:获取父类
+    	getInterfaces:获取实现的接口
 	
-	
-	
+四.内存分配
+    1.栈内存(线程私有)
+        栈内存包含程序计数器,jvm栈和本地方法栈
+        栈内存用来存储局部变量和方法调用
+        栈内存不足时抛出StackOverFlowError
+
+    2.堆内存(线程共享)
+        堆内存用来保存对象,方法区和运行时常量池
+        堆内存不足时抛出OutOfMemoryError
+
+    3.Xss代表栈内存大小,Xms代表初始堆内存大小,Xmx代表最大堆内存大小
+
+五.Java命令(tools.jar)
+    1.jps 显示当前用户的所有java进程的PID
+        jps -v PID      显示虚拟机参数
+        jps -m PID      显示传递给main函数的参数(在嵌入式JVM上可能是null)
+        jps -l PID      显示主类的全路径
+        jps -q          只显示PID
+
+    2.jstat 显示进程中的类装载,内存,垃圾收集,JIT编译等运行数据
+      命令格式 jstat -<option> [-t] [-h<lines>] <vmid> [<interval>|<count>]
+      例: jstat -gc 4199 200 5      每200毫秒打印一次PID为4199的java进程的gc信息,一共打印5次
+      常用命令形式
+        jstat -class PID            显示加载的class数量和空间占用,
+        jstat -compiler PID         显示VM实时编译数量信息
+        jstat -gc PID               显示GC信息

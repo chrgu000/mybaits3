@@ -1,3 +1,33 @@
-﻿一.翻译菜单
+一.翻译菜单
 	1)Maven:
 		use plugin registry:
+		
+二.快捷键
+	ctrl+shift+a		搜索所有的设置和可用操作(register为登记表(开启自动编译时用))
+	F2/Shift+F2			移动到有错误的代码
+	Alt+Enter			快速修复
+	Ctrl+Shift+Enter	自动补全末尾的字符。而且不只是括号，例如敲完if/for时也可以自动补上{}花括号
+	Ctrl+Shift+Alt+T	显示全部的重构菜单
+	Shift+F6			重命名
+	Ctrl+Alt+V			提取变量
+	Ctrl+J				查看代码模板
+	Alt+Insert			生成构造函数,get,set方法等
+	Ctrl+W/Ctrl+Shift+W	根据语法选中代码(扩大范围/缩小范围)
+	Ctrl+Y				删除行
+	Ctrl+D				复制行
+	Alt+F1				查找代码所在的位置	
+	Ctrl＋P				显示参数信息
+	Ctrl＋Alt＋T			可以把代码包在一块内，例如try/catch
+	Ctrl＋Shift＋Alt＋N	全局搜索变量名称,包括类文件
+
+三.ideavim
+    i                   在当期位置插入
+    I                   在当前行首插入
+    a                   在当前位置后插入
+    A                   在当前行尾插入
+    o                   在当前行之后插入一行
+    O                   在当前行之前插入一行
+    /text               查找text,按n键查找下一个,按N键查找上一个
+    ?text               反向查找
+    .*[]^%/?~$          等字符在查找时需要转意
+
