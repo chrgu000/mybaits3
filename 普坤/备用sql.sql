@@ -229,4 +229,30 @@ SELECT b.sid oracleID,
        b.machine 计算机名  
 FROM v$process a, v$session b, v$sqlarea c  
 WHERE a.addr = b.paddr  
-   AND b.sql_hash_value = c.hash_value 
+   AND b.sql_hash_value = c.hash_value;
+
+--sql语句的历史记录
+-- command_type 类型
+-- 2 insert
+-- 3 select
+-- 6 update
+-- 7 delete
+-- 42 alter session
+-- 44 commit
+-- 47 begin 存储过程 end
+-- 48 SET TRANSACTION
+-- 49 alter system
+-- 85 truncate table
+SELECT T1.SESSION_ID,
+       T1.SESSION_SERIAL#,
+       T3.USERNAME,
+       TO_CHAR(T1.SAMPLE_TIME),
+       TO_CHAR(T2.SQL_TEXT)
+  FROM DBA_HIST_ACTIVE_SESS_HISTORY T1, DBA_HIST_SQLTEXT T2, DBA_USERS T3
+ WHERE T1.SQL_ID = T2.SQL_ID
+   AND T1.USER_ID = T3.USER_ID
+   AND T1.SAMPLE_TIME > TRUNC(SYSDATE) - 1
+   AND T2.COMMAND_TYPE = 47
+ ORDER BY T1.SAMPLE_TIME DESC;
+
+
