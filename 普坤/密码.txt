@@ -10,6 +10,10 @@ intern/intern_pk#123
 192.168.1.10
 hadoop/Hadoop_pk123
 
+FTP地址：ftp://ftp1.linuxidc.com
+用户名：ftp1.linuxidc.com
+密码：www.linuxidc.com
+
 巡检结果会自动放到以下主机目录，每天三次，时间为：8,12,17 点的36分
 主机：10.128.109.96
 用户/密码：basezy/hbasezy
