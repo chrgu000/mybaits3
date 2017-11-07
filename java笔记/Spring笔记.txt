@@ -21,6 +21,9 @@
 	Autowired:Spring提供的注解,默认按照类型装配
 	
 	InitBinder	方法级别注解,用于定义参数解析器,方法接受一个WebDataBinder参数
+
+	ConditionalOnMissingBean:   接收一个参数name,表示只有在包含指定name的bean时,才创建对应的bean
+	ConditionalOnClass:         接收多个class类型的参数,标识只有在包含指定class的情况下才解析RabbitAutoConfiguration
 	
 二:笔记
 	mvc:annotation-driven:该标签是以一简洁的形式注册了DefaultAnnotationHandlerMapping和AnnotationMethodHandlerAdapter两个bean,是为Contrillers分发请求所必须的,并且提供了数据绑定支持以及NumberFormatannotation,DateTimeFormat,Valid等注解的支持
@@ -45,15 +48,16 @@ GenericTypeResolver:泛型相关工具类
 		spring.profiles.active: 指定需要使用的配置文件
 	注解:
 		@Value	配置文件的注入
-		@Component
+		@Component  以组件的形式注册bean
 		@ConfigurationProperties 配置文件自动注入
-		@Controller 处理Http请求
+		@Controller 以action的形式注册bean,处理Http请求
 		@RestController Spring4新增注解,等同于@Controller+@ResponseBody
 		@RequestMapping 配置url映射
 		@PathVariable 获取url中的数据
 		@RequestParam 获取请求参数的值(可以设置是否必须,默认值)
 		@GetMapping 组合注解 get方式@RequestMapping
 		@PostMapping post方式@RequestMapping
+		@Configuration 标注为配置类,可以使用@Import来导入其他配置类,也可以使用@ImportResource来加载xml配置
 		
 		@Entity 实体注解
 		@Id 主键
@@ -76,7 +80,12 @@ GenericTypeResolver:泛型相关工具类
 		创建我们自己的拦截器类并实现 HandlerInterceptor 接口。 
 		创建一个Java类继承WebMvcConfigurerAdapter，并重写 addInterceptors 方法。 
 		实例化我们自定义的拦截器，然后将对像手动添加到拦截器链中（在addInterceptors方法中添加）
-		
+
+	监听器:
+	    创建监听器需要实现ApplicationListener接口,接收一个泛型,监听器可以使用addListeners方法添加进应用
+	    ApplicationStartedEvent,ApplicationEnvironmentPreparedEvent,ApplicationPreparedEvent,ApplicationFailedEvent
+        分别对应:启动开始,准备完毕但还没有创建上下文,上下文创建完成但是bean还没有完全加载,启动异常
+
 	服务启动时的操作:
 		需要实现CommandLineRunner接口,@Order指定执行顺序,@Component指定该类是一个组件
 		
@@ -87,6 +96,9 @@ GenericTypeResolver:泛型相关工具类
 	如果你想完全控制Spring MVC，你可以在@Configuration注解的配置类上增加@EnableWebMvc，增加
 	该注解以后WebMvcAutoConfiguration中配置就不会生效，你需要自己来配置需要的每一项。这种情况下
 	的配置方法建议参考WebMvcAutoConfiguration类。
+
+	在不使用spring-boot-parent作为父项目的情况下需要配置spring-boot-dependencies
+	static-locations: ["file:src/main/webapp/static/"]
 		
 五.SpringJpa
 	建立接口继承JpaRepository类<实体,主键>

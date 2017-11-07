@@ -36,6 +36,14 @@ volitae	不稳定的
 			isCancelled 如果任务在完成之前被取消返回true
 			isDone	如果任务已完成返回true
 	6.Spring线程池
+	7.JAVA并发工具包
+	    ThreadLocal:        用于创建一个每个线程都能独立操作的对象
+        ReentrantLock:      可选公平锁
+        ThreadLocalRandom:  随机数生成器
+        ReadWriteLock:      读写锁,可以获取多个读取锁或者一个写入锁
+        AtomicLong:         支持原子级操作的long
+        AtomicReference:    原子级别引用(主要用于赋值操作)
+        AtomicIntegerArray: 支持原子操作的int数组
 				
 	
 	
@@ -93,3 +101,5 @@ volitae	不稳定的
         jstat -class PID            显示加载的class数量和空间占用,
         jstat -compiler PID         显示VM实时编译数量信息
         jstat -gc PID               显示GC信息
+
+六.RMI远程方法调用

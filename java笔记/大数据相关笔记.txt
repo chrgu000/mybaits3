@@ -106,4 +106,5 @@
 	--total-executor-cores:总共用多少个线程执行
 	--class:指定启动类
 	--master:指定master节点 
-	
+
+12.大数据环境部署工具:Ambari(可以方便的自动部署分布式环境)
