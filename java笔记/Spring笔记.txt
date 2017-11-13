@@ -22,7 +22,7 @@
 	
 	InitBinder	方法级别注解,用于定义参数解析器,方法接受一个WebDataBinder参数
 
-	ConditionalOnMissingBean:   接收一个参数name,表示只有在包含指定name的bean时,才创建对应的bean
+	ConditionalOnMissingBean:   接收一个参数name,表示只有在不包含指定name的bean时,才创建对应的bean
 	ConditionalOnClass:         接收多个class类型的参数,标识只有在包含指定class的情况下才解析RabbitAutoConfiguration
 	
 二:笔记
@@ -137,3 +137,26 @@ GenericTypeResolver:泛型相关工具类
 	
 八.使用springloaded实现热部署
 	set JAVA_OPTS=-javaagent:springloaded-1.2.5.RELEASE.jar -noverify
+
+九.hibernate注解
+    Entity:         声明为实体bean类
+    Id:             声明了实体的标识属性
+    GenerateValue:  主键的生成策略,AUTO:取决于底层不同的数据库,TABLE:使用表保存ID值,IDENTITY:自增,SEQUENCE:序列
+                    类型的枚举类GenerationType
+    Table:          为实体bean指定对应的数据表,uniqueConstraints属性可以定义唯一约束
+    Version:        注解用于支持乐观锁版本控制,一般映射到@Column(name="OPTLOCK")字段来检测版本冲突可以用数字
+                    或者时间戳
+    Column:         列注解,name标识列名,unique表示是否唯一约束,nullable是否可为null,insertable是否insert,
+                    updatable是否update,columnDefinition默认值,table对应的表,length列长度,precision
+                    decimal精度,scaled ecimal长度
+    Transient:      标识该属性不需要持久化
+    Lob:            将被持久化为Blog或Clob类型
+    Inheritance:    类的继承策略,TABLE_PER_CLASS:每个类一张表,SINGLE_TABLE:每个类层次结构一张表,JOINED:连接
+                    的子类策略
+    MappedSuperclass: 配置模板类,类本身不映射数据表
+
+    无注解属性默认值:
+        属性为简单类型,则映射为@Basic
+        属性对应的类型定义了@Embeddable则映射为@Embedded
+        属性对应的类实现了Serializable,则属性被映射为@Basic并在一个列中保存该对象的serialized版本
+        属性类型为java.sql.Clob或者java.sql.Blob映射为@Lob对应的类型

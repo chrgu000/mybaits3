@@ -1,88 +1,130 @@
-provided Èç¹û
-build	 ½¨Á¢
-plugin	 ²å¼ş
-deploy	 ²¿Êğ
-central  ÖĞÑë
-snapshot ¿ìÕÕ
-1.Ö÷Á÷ÏîÄ¿¹ÜÀíºÍ¹¹½¨¹¤¾ß
+provided å¦‚æœ
+build	 å»ºç«‹
+plugin	 æ’ä»¶
+deploy	 éƒ¨ç½²
+central  ä¸­å¤®
+snapshot å¿«ç…§
+1.ä¸»æµé¡¹ç›®ç®¡ç†å’Œæ„å»ºå·¥å…·
 Maven Ant gradle
 
-2.MavenÄ¿Â¼½á¹¹
-src							¸ùÂ·¾¶
-	-main					Ö÷Òª´úÂë
+2.Mavenç›®å½•ç»“æ„
+src							æ ¹è·¯å¾„
+	-main					ä¸»è¦ä»£ç 
 		-java
 			-package
-	-test					²âÊÔ´úÂë
+	-test					æµ‹è¯•ä»£ç 
 		-java
 			-package
-	-resource				×ÊÔ´Ä¿Â¼
+	-resource				èµ„æºç›®å½•
 
-3.pom.xml±êÇ©
-	groupId					ÏîÄ¿°üÃû
-	artifactId				Ä£¿éÃû
-	version					°æ±¾
-	dependencies			ÒÀÀµ
-		type		
-		scope				ÒÀÀµ·¶Î§test(²âÊÔ) compile(Ä¬ÈÏ) provided(±àÒë,²âÊÔ) runtime(ÔËĞĞ) system(Óë±¾»ú¹ØÁª) import(´ÓÆäËûµØ·½µ¼Èë)
-		optional			ÒÀÀµÊÇ·ñ¿ÉÑ¡true false(ÒÀÀµÊÇ·ñ±»¼Ì³Ğ)
-		exclusions			ÅÅ³ı´«µİ
-			
-	modelVersion  			pom°æ±¾4.0.0
-	packaging				´ò°ü·½Ê½ war jar zip pom
-	name 					ÏîÄ¿ÃèÊöÃû
-	url						ÏîÄ¿µØÖ·
-	description				ÏîÄ¿ÃèÊö
-	developers				¿ª·¢ÈËÔ±ÁĞ±í
-	licenses				Ğí¿ÉÖ¤
-	organization			×éÖ¯ĞÅÏ¢
-	build					¹¹½¨ĞĞÎªÖ§³Ö
-		defaultGoal 		Ö¸¶¨¶¯×÷  Ä¬ÈÏinstall
-		directory   		´æ·ÅÎ»ÖÃ  Ä¬ÈÏ${basedir}/target
-		finalName			ÎÄ¼şÃû	  Ä¬ÈÏ${artifactId}-${version}
-		plugins 			²å¼şÁĞ±í
-	dependencyManagement	ÒÀÀµµÄ¹ÜÀí
-	parent					¸¸Ä£¿é
-	modules					¶àÄ£¿é
-	properties				¶¨ÒåÊôĞÔ ±êÇ©Îªkey,ÄÚÈİÎªvalue,ÀàËÆEL±í´ïÊ½ÒıÓÃ
-4.ÃüÁî
-	compile ±àÒë(»á×Ô¶¯ÏÂÔØ²å¼şºÍjar)
-	test 	ÔËĞĞ²âÊÔÓÃÀı
-	package	´ò°üÏîÄ¿
-	clean	É¾³ıtarget
-	install °²×°jar°üµ½±¾µØ²Ö¿âÖĞ
-	
-	archetype:generate	´´½¨ÏîÄ¿¹Ç¼Ü
-	archetype:generate -DgroupId=${°üÃû} -DartifactId=${Ä£¿éÃû} -Dversion${°æ±¾} -Dpackage=${°üÃû} ¿ìËÙ´´½¨ÏîÄ¿¹Ç¼Ü
-	dependency:tree 	´òÓ¡µ±Ç°ÏîÄ¿µÄÒÀÀµÊ÷
-	
-5.setting.xml±êÇ©
-	localRepository  ±¾µØ²Ö¿âÂ·¾¶
-	mirror	¾µÏñ²Ö¿â
-	mirrorOf	²Ö¿âÃû³Æ
-	profile 	Ö¸¶¨jdk
-	
-6.eclipseµÄMaven²å¼şm2e
+3.pom.xmlæ ‡ç­¾
+	groupId					é¡¹ç›®åŒ…å
+	artifactId				æ¨¡å—å
+	version					ç‰ˆæœ¬
+	dependencies			ä¾èµ–
+		type                é»˜è®¤ä¸ºjarç±»å‹ï¼Œå¸¸ç”¨çš„ç±»å‹æœ‰ï¼šjar,ejb-client,test-jar...,å¯è®¾ç½®pluginsä¸­çš„extensionså€¼ä¸ºtrueååœ¨å¢åŠ  æ–°çš„ç±»å‹
+		scope				ä¾èµ–èŒƒå›´test(æµ‹è¯•) compile(é»˜è®¤) provided(ç¼–è¯‘,æµ‹è¯•) runtime(è¿è¡Œ) system(ä¸æœ¬æœºå…³è”) import(ä»å…¶ä»–åœ°æ–¹å¯¼å…¥)
+		optional			ä¾èµ–æ˜¯å¦å¯é€‰true false(ä¾èµ–æ˜¯å¦è¢«ç»§æ‰¿)
+		exclusions			æ’é™¤ä¼ é€’
 
-7.ÏîÄ¿¹¹½¨¹ı³Ì
-ÇåÀí-±àÒë-²âÊÔ-´ò°ü-¼¯³É²âÊÔ-ÑéÖ¤-²¿Êğ
+	modelVersion  			pomç‰ˆæœ¬4.0.0
+	packaging				æ‰“åŒ…æ–¹å¼ war jar zip pom
+	name 					é¡¹ç›®æè¿°å
+	url						é¡¹ç›®åœ°å€
+	description				é¡¹ç›®æè¿°
+	developers				å¼€å‘äººå‘˜åˆ—è¡¨
+	licenses				è®¸å¯è¯
+	organization			ç»„ç»‡ä¿¡æ¯
+	build					æ„å»ºè¡Œä¸ºæ”¯æŒ
+		defaultGoal 		æŒ‡å®šåŠ¨ä½œ  é»˜è®¤install
+		directory   		å­˜æ”¾ä½ç½®  é»˜è®¤${basedir}/target
+		finalName			æ–‡ä»¶å	  é»˜è®¤${artifactId}-${version}
+		plugins 			æ’ä»¶åˆ—è¡¨
+	dependencyManagement	ä¾èµ–çš„ç®¡ç†(å¸®åŠ©ç®¡ç†å­é¡¹ç›®)
+	parent					çˆ¶æ¨¡å—
+	modules					å¤šæ¨¡å—
+	properties				å®šä¹‰å±æ€§ æ ‡ç­¾ä¸ºkey,å†…å®¹ä¸ºvalue,ç±»ä¼¼ELè¡¨è¾¾å¼å¼•ç”¨
+4.å‘½ä»¤
+	compile ç¼–è¯‘(ä¼šè‡ªåŠ¨ä¸‹è½½æ’ä»¶å’Œjar)
+	test 	è¿è¡Œæµ‹è¯•ç”¨ä¾‹
+	package	æ‰“åŒ…é¡¹ç›®
+	clean	åˆ é™¤target
+	install å®‰è£…jaråŒ…åˆ°æœ¬åœ°ä»“åº“ä¸­
 
-8.ÉúÃüÖÜÆÚ
-	clean ÇåÀíÏîÄ¿
-		pre-clean	ÇåÀíÇ°
-		clean ÇåÀíÉÏÒ»´Î¹¹½¨²úÉúµÄËùÓĞÎÄ¼ş
-		post-clean  ÇåÀíºó
-	default ¹¹½¨Õ¾µã
-		compile	±àÒë
-		test	²âÊÔ
-		package	´ò°ü
-		install	°²×°µ½±¾µØ
-	site Éú³ÉÏîÄ¿Õ¾µã
-		pre-site	Éú³ÉÕ¾µãÇ°
-		site Éú³ÉÏîÄ¿µÄÕ¾µãÎÄµµ
-		post-site Éú³ÉÕ¾µãºó
-		site-deplo ·¢²¼Éú³ÉµÄÕ¾µãµ½·şÎñÆ÷
-		
-9.ÒÀÀµ³åÍ»
-	¶ÌÂ·ÓÅÏÈ
-	ÏÈÉêÃ÷ÓÅÏÈ
-	
+	archetype:generate	åˆ›å»ºé¡¹ç›®éª¨æ¶
+	archetype:generate -DgroupId=${åŒ…å} -DartifactId=${æ¨¡å—å} -Dversion${ç‰ˆæœ¬} -Dpackage=${åŒ…å} å¿«é€Ÿåˆ›å»ºé¡¹ç›®éª¨æ¶
+	dependency:tree 	æ‰“å°å½“å‰é¡¹ç›®çš„ä¾èµ–æ ‘
+
+5.setting.xmlæ ‡ç­¾
+	localRepository  æœ¬åœ°ä»“åº“è·¯å¾„
+	mirror	é•œåƒä»“åº“
+	mirrorOf	ä»“åº“åç§°
+	profile 	æŒ‡å®šjdk
+
+6.eclipseçš„Mavenæ’ä»¶m2e
+
+7.é¡¹ç›®æ„å»ºè¿‡ç¨‹
+æ¸…ç†-ç¼–è¯‘-æµ‹è¯•-æ‰“åŒ…-é›†æˆæµ‹è¯•-éªŒè¯-éƒ¨ç½²
+
+8.ç”Ÿå‘½å‘¨æœŸ
+	clean æ¸…ç†é¡¹ç›®
+		pre-clean	æ¸…ç†å‰
+		clean æ¸…ç†ä¸Šä¸€æ¬¡æ„å»ºäº§ç”Ÿçš„æ‰€æœ‰æ–‡ä»¶
+		post-clean  æ¸…ç†å
+	default æ„å»ºç«™ç‚¹
+		compile	ç¼–è¯‘
+		test	æµ‹è¯•
+		package	æ‰“åŒ…
+		install	å®‰è£…åˆ°æœ¬åœ°
+	site ç”Ÿæˆé¡¹ç›®ç«™ç‚¹
+		pre-site	ç”Ÿæˆç«™ç‚¹å‰
+		site ç”Ÿæˆé¡¹ç›®çš„ç«™ç‚¹æ–‡æ¡£
+		post-site ç”Ÿæˆç«™ç‚¹å
+		site-deplo å‘å¸ƒç”Ÿæˆçš„ç«™ç‚¹åˆ°æœåŠ¡å™¨
+
+9.ä¾èµ–å†²çª
+	çŸ­è·¯ä¼˜å…ˆ
+	å…ˆç”³æ˜ä¼˜å…ˆ
+
+10.å­å·¥ç¨‹ä¼šç»§æ‰¿çˆ¶å·¥ç¨‹çš„dependencies,developers,contributors,plugin lists,reports lists,plugin execution with matching ids,plugin configuration
+11.çˆ¶å·¥ç¨‹å¦‚æœç”Ÿå‘½äº†relativePathæ ‡ç­¾åˆ™ä¼šå°è¯•ä¼˜å…ˆä»è¿œç¨‹åº“è·å–
+
+12.æ„å»ºé…ç½®
+    defaultGoal:    é»˜è®¤çš„ç›®æ ‡ï¼Œå¿…é¡»è·Ÿå‘½ä»¤è¡Œä¸Šçš„å‚æ•°ç›¸åŒï¼Œå¦‚ï¼šjar:jar,æˆ–è€…ä¸æ—¶æœŸparseç›¸åŒ,ä¾‹å¦‚install
+    directory:      æŒ‡å®šæ„å»ºçš„ç›®æ ‡ç›®å½•,é»˜è®¤ä¸º$(basedir}/target
+    finalName:      æŒ‡å®šå»æ‰åç¼€çš„å·¥ç¨‹åç§°,é»˜è®¤ä¸º${artifactId}-${version}
+    filters:        ç”¨äºå®šä¹‰æŒ‡å®šfilterå±æ€§çš„ä½ç½®ï¼Œä¾‹å¦‚filterå…ƒç´ èµ‹å€¼filters/filter1.properties,é‚£ä¹ˆè¿™ä¸ªæ–‡ä»¶é‡Œé¢å°±å¯ä»¥å®šä¹‰name=valueå¯¹ï¼Œè¿™ä¸ªname=valueå¯¹çš„å€¼
+                    å°±å¯ä»¥åœ¨å·¥ç¨‹pomä¸­é€šè¿‡${name}å¼•ç”¨ï¼Œé»˜è®¤çš„filterç›®å½•æ˜¯${basedir}/src/main/fiters/
+    resources:      æè¿°å·¥ç¨‹ä¸­èµ„æºçš„ä½ç½®,ä»¥ä¸‹ä¸ºå­æ ‡ç­¾
+                    targetPath:     æŒ‡å®šè¦æ„å»ºçš„ç›®å½•,é»˜è®¤ä¸º$(basedir}
+                    filtering:      æŒ‡å®šæ˜¯å¦å°†filteræ–‡ä»¶(å³ä¸Šé¢è¯´çš„filtersé‡Œå®šä¹‰çš„*.propertyæ–‡ä»¶)çš„å˜é‡å€¼åœ¨è¿™ä¸ªresourceæ–‡ä»¶æœ‰æ•ˆ,ä¾‹å¦‚ä¸Šé¢å°±æŒ‡å®šé‚£äº›å˜é‡å€¼åœ¨
+                                    configurationæ–‡ä»¶æ— æ•ˆ
+                    directory:      æŒ‡å®šå±æ€§æ–‡ä»¶çš„ç›®å½•ï¼Œbuildçš„è¿‡ç¨‹éœ€è¦æ‰¾åˆ°å®ƒï¼Œå¹¶ä¸”å°†å…¶æ”¾åˆ°targetPathä¸‹ï¼Œé»˜è®¤çš„directoryæ˜¯${basedir}/src/main/resources
+                    includes:       æŒ‡å®šåŒ…å«æ–‡ä»¶çš„patterns,ç¬¦åˆæ ·å¼å¹¶ä¸”åœ¨directoryç›®å½•ä¸‹çš„æ–‡ä»¶å°†ä¼šåŒ…å«è¿›projectçš„èµ„æºæ–‡ä»¶
+                    excludes:       æŒ‡å®šä¸åŒ…å«åœ¨å†…çš„patterns,å¦‚æœincluesä¸excludesæœ‰å†²çªï¼Œé‚£ä¹ˆexcludesèƒœåˆ©ï¼Œé‚£äº›ç¬¦åˆå†²çªçš„æ ·å¼çš„æ–‡ä»¶æ˜¯ä¸ä¼šåŒ…å«è¿›æ¥çš„
+                    testResources:  è¿™ä¸ªæ¨¡å—åŒ…å«æµ‹è¯•èµ„æºå…ƒç´ ï¼Œå…¶å†…å®¹å®šä¹‰ä¸resourcesç±»ä¼¼ï¼Œä¸åŒçš„ä¸€ç‚¹æ˜¯é»˜è®¤çš„æµ‹è¯•èµ„æºè·¯å¾„æ˜¯${basedir}/src/test/resources,
+                                    æµ‹è¯•èµ„æºæ˜¯ä¸éƒ¨ç½²çš„
+    plugin:        æ’ä»¶,ä»¥ä¸‹ä¸ºå­æ ‡ç­¾
+                    extensions:     å†³å®šæ˜¯å¦è¦åŠ è½½è¿™ä¸ªæ’ä»¶çš„extensions,é»˜è®¤ä¸ºtrue
+                    inherited:      æ˜¯å¦è®©å­pomç»§æ‰¿,é»˜è®¤ä¸ºtrue
+                    configuration:  é€šå¸¸ç”¨äºç§æœ‰ä¸å¼€æºçš„plugin,ä¸èƒ½å¤Ÿè¯¦ç»†äº†è§£pluginçš„å†…éƒ¨å·¥ä½œåŸç†ï¼Œä½†ä½¿pluginæ»¡è¶³çš„properties
+                    dependencies:   ä¸pomåŸºç¡€çš„dependenciesçš„ç»“æ„å’ŒåŠŸèƒ½éƒ½ç›¸åŒï¼Œåªæ˜¯pluginçš„dependenciesç”¨äºplugin,è€Œpomçš„denpendenciesç”¨äºé¡¹ç›®æœ¬èº«.
+                                    åœ¨pluginçš„dependenciesä¸»è¦ç”¨äºæ”¹å˜pluginåŸæ¥çš„dependenciesï¼Œä¾‹å¦‚æ’é™¤ä¸€äº›ç”¨ä¸åˆ°çš„dependencyæˆ–è€…ä¿®æ”¹dependencyçš„
+                                    ç‰ˆæœ¬ç­‰ï¼Œè¯¦ç»†è¯·çœ‹pomçš„denpendencies
+                    executions:     pluginä¹Ÿæœ‰å¾ˆå¤šä¸ªç›®æ ‡ï¼Œæ¯ä¸ªç›®æ ‡å…·æœ‰ä¸åŒçš„é…ç½®ï¼Œexecutionså°±æ˜¯è®¾å®špluginçš„ç›®æ ‡
+                    execution:      æ’ä»¶çš„ç›®æ ‡,ä»¥ä¸‹ä¸ºå­æ ‡ç­¾
+                                    id:             æ ‡è¯†ç¬¦
+                                    goals:          ç›®æ ‡
+                                    phase:          å£°æ˜goalsçš„æ‰§è¡Œæ—¶æœŸ
+                                    inherited:      æ˜¯å¦ä¼ é€’åˆ°å­pomé‡Œ
+                                    configuration:  ç½®executionä¸‹åˆ—è¡¨çš„goalsçš„è®¾ç½®ï¼Œè€Œä¸æ˜¯pluginæ‰€æœ‰çš„goalsçš„è®¾ç½®
+
+
+
+13.packgeçš„è¿‡ç¨‹    phaseå’Œgoalå¯¹åº”
+    process-resources       resources:resources
+    compile                 compiler:compile
+    process-test-resources  resources:testResources
+    test-compile            compiler:testCompile
+    test                    surefire:test
+    package                 jar:jar
