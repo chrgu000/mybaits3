@@ -1,0 +1,8 @@
+1.字典表
+	ALL_TABLES				所有用户的表
+	ALL_CONSTRAINTS			主外键
+	ALL_INDEXS				索引
+	USER_TAB_COLUMNS		用户表的列
+	USER_TABLES				用户的表
+
+2.数据类型

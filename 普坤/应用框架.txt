@@ -1,0 +1,7 @@
+一.ORM框架依赖
+    AccessService:依赖
+        AbstractNamespaceAccessServiceImpl: 为Model实现了ORM功能
+            继承自 AbstractExecutiveAccessServiceImpl
+                继承自 AbstractDataAccessServiceImpl    该类继承自AbstractIbatisAccessServiceImpl决定了需要ibaits的支持
+                                                       需要实现 AbstractDataAccessService 接口
+

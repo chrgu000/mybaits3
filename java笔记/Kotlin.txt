@@ -1,0 +1,5 @@
+1.传递数组给可变参数类型时需要在参数名前面加*号
+2.Kotlin的可见性修饰符有private,protected,internal,public.默认为public
+    private 只有在声明文件中可见
+    internal 在同一模块中的任何地方可见
+    protected 在包中可见

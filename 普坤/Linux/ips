@@ -1,0 +1,9 @@
+pk11in 1122 intern@210.22.155.62 intern_pk#123
+pk11ha 1122 hadoop@210.22.155.62 Hadoop_pk123
+pk10ha 1022 hadoop@210.22.155.62 Hadoop_pk123
+jt96zy 5151 hbasezy@10.128.109.96 hbasezy
+jt755yarn 5151 hbasezy@10.128.109.96 hbasezy 5151 yarn@10.128.75.5 yarn123
+jt755oss 5151 hbasezy@10.128.109.96 hbasezy 5151 osschk@10.128.75.5 osschk123
+jt6991oss 5151 hbasezy@10.128.109.96 hbasezy 5151 yarn@10.128.69.91 Ossdgp#1234
+jt6992oss 5151 hbasezy@10.128.109.96 hbasezy 5151 yarn@10.128.69.92 Ossdgp#1234
+

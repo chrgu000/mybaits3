@@ -96,9 +96,11 @@ GenericTypeResolver:泛型相关工具类
 	如果你想完全控制Spring MVC，你可以在@Configuration注解的配置类上增加@EnableWebMvc，增加
 	该注解以后WebMvcAutoConfiguration中配置就不会生效，你需要自己来配置需要的每一项。这种情况下
 	的配置方法建议参考WebMvcAutoConfiguration类。
+    在不使用spring-boot-parent作为父项目的情况下需要配置spring-boot-dependencies
 
-	在不使用spring-boot-parent作为父项目的情况下需要配置spring-boot-dependencies
-	static-locations: ["file:src/main/webapp/static/"]
+    配置相关:
+	    static-locations: ["file:src/main/webapp/static/"]
+	    validation-query: SELECT 1      配合test-while-idle和test-on-borrow在创建数据源时测试数据源是否能连通
 		
 五.SpringJpa
 	建立接口继承JpaRepository类<实体,主键>
@@ -154,9 +156,42 @@ GenericTypeResolver:泛型相关工具类
     Inheritance:    类的继承策略,TABLE_PER_CLASS:每个类一张表,SINGLE_TABLE:每个类层次结构一张表,JOINED:连接
                     的子类策略
     MappedSuperclass: 配置模板类,类本身不映射数据表
+    Transient:          该注解标注ORM忽略的属性
 
     无注解属性默认值:
         属性为简单类型,则映射为@Basic
         属性对应的类型定义了@Embeddable则映射为@Embedded
         属性对应的类实现了Serializable,则属性被映射为@Basic并在一个列中保存该对象的serialized版本
         属性类型为java.sql.Clob或者java.sql.Blob映射为@Lob对应的类型
+
+十.与Mybaits的整合
+    使用mybatis-spring-boot-starter依赖
+    实体类无需注解映射
+    dao类使用@Mapper注解映射一个借口即可,借口类的方法可以接受一个@select注解作为查询
+    配置项:
+    map-underscore-to-camel-case:   使用驼峰命名法
+    config-location:                指定本地xml配置文件的位置
+    check-config-location:          检查本地的xml文件
+    mapper-locations:               指定本地映射xml文件的位置
+    type-aliases-package:           用于搜索类型别名的软件包
+    type-handlers-package:          用于搜索类型处理程序的软件包
+    executor-type:                  执行程序类型SIMPLE,REUSE,BATCH
+    configuration-properties:       Mybaits外部化配置文件
+    configuration:                  配置MyBaitsBean不能与config-location同时使用(详细配置可以查询Configuration类)
+        default-statement-timeout:              配置stmt的超时时间,单位秒
+        auto-mapping-unknown-column-behavior:   发现没有映射的列时的行为,NONE不做任何反应,WARNING输出提醒日志(org.apache.ibatis
+                                                .session.AutoMappingUnknownColumnBehavior的日志等级必须为WARN),FAILING映射
+                                                失败,抛出异常
+        default-fetch-size:                     驱动的结果集获取数量,设置一个提示值.此参数只可以在查询中被覆盖
+
+    注解:
+        Lang:                       使用自己写的驱动改动脚本
+    类:
+        LanguageDriver:    该类好像可以在sql语句执行之前改动sql语句,可以细看
+        MapperMethod:      该类作为解析sql注解并能执行的类
+        MapperRegistry:    Mapper的注册类,如果要做额外的逻辑考虑从这里入手
+
+十一.测试
+    @RunWith(SpringRunner::class)   告诉Junit使用SpringBoot的单元测试,是SpringJunit4ClassRunner的替代
+    @SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)  指定运行SpringBoot为一个基础的测试
+    以上注解为新版本的SpringBoot的测试注解
