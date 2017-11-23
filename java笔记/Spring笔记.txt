@@ -40,6 +40,18 @@ AnnotationUtils:注解工具类
 ReflectionUtils:反射工具类
 ClassUtils:class工具类
 GenericTypeResolver:泛型相关工具类
+ResourceUtils:  读取资源文件
+    内置Resouce类
+        ClassPathResource:      读取构建路径下的文件
+        UrlResource:            读取网络中的文件
+        FileSystemResource:     读取系统中的文件
+        ServletContextResource:
+        InputStreamResource:
+        ByteArrayResource:
+        EncodedResource:
+        VfsResource:
+
+
 
 四.SpringBoot的使用
 	application.properties/application.yml配置文件:

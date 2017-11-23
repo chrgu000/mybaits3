@@ -1,0 +1,2 @@
+一.官方网站: http://www.mybatis.org/ (含有中文文档)
+    启动方式:   通过SqlSessionFactoryBuilder构建Mybaits
